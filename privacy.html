@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung — Fermento</title>
+<script>document.documentElement.className += ' js';</script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; line-height: 1.6; color: #2A241D; background: #FBF3E4; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 32px; }
+  h3 { font-size: 15px; margin-top: 22px; }
+  .updated { color: rgba(42,36,29,.6); font-size: 13px; margin-bottom: 24px; }
+  a { color: #B5502F; }
+  .langbar { flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding-bottom: 18px; border-bottom: 1px solid #EFE6D2; font-size: 14px; }
+  .langbar a { color: #B5502F; text-decoration: none; padding: 4px 12px; border: 1px solid #EFE6D2; border-radius: 999px; background: #FFFDF8; }
+  .langbar a.active { background: #B5502F; color: #fff; border-color: #B5502F; }
+  .highlight { background: #DDE7D2; border: 1px solid #9BB58A; border-radius: 10px; padding: 14px 16px; margin: 22px 0; font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 14px; }
+  th, td { border: 1px solid #EFE6D2; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #F6E2B8; }
+  address { font-style: normal; }
+  html.js section[data-lang] { display: none; }
+  html.js section[data-lang].active { display: block; }
+  html.js .langbar { display: flex; }
+  html:not(.js) .langbar { display: none; }
+</style>
+</head>
+<body>
+
+<nav class="langbar">
+  <a href="#" data-set="de" class="active">Deutsch</a>
+  <a href="#" data-set="en">English</a>
+  <a href="#" data-set="es">Español</a>
+  <a href="#" data-set="fr">Français</a>
+  <a href="#" data-set="it">Italiano</a>
+  <a href="#" data-set="nl">Nederlands</a>
+</nav>
+
+<section data-lang="de" class="active">
+  <h1>Datenschutzerklärung</h1>
+  <p class="updated">Stand: 8. September 2026 · gilt für die iOS-App „Fermento“</p>
+
+  <div class="highlight">
+    <strong>Kurzfassung:</strong> Fermento speichert deine Gläser, Protokolle und Fotos auf deinem
+    Gerät. Es gibt keinen Server von mir, kein Tracking, keine Werbung und keine Analyse-Dienste.
+    Wenn du iCloud aktiviert hast, synchronisiert Apple deine Daten in deine private iCloud —
+    ich habe darauf keinen Zugriff. Nur zwei Dinge verlassen dein Gerät überhaupt: eine ungefähre
+    Ortsangabe für die optionale Wettervorhersage und Kaufinformationen für die Abo-Verwaltung.
+  </div>
+
+  <h2>1. Verantwortlicher</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Deutschland<br>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. Welche Daten verarbeitet werden und warum</h2>
+
+  <h3>2.1 Deine Ferment-Daten (nur auf dem Gerät)</h3>
+  <p>
+    Alles, was du in der App anlegst — Gläser, Namen, Fütterungen, Notizen, Health-Checks,
+    Rise-Werte, Badges, Streaks, Einstellungen und Fotos — wird ausschließlich lokal im
+    App-Container deines Geräts gespeichert. Diese Daten werden nicht an mich übertragen.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungsvertrags).
+  </p>
+
+  <h3>2.2 iCloud-Synchronisation (optional, durch dich gesteuert)</h3>
+  <p>
+    Wenn du in den iOS-Einstellungen iCloud und iCloud Drive für Fermento aktiviert hast, werden
+    deine Ferment-Daten über Apples CloudKit in deine <em>private</em> iCloud-Datenbank
+    synchronisiert, damit sie auf deinen Geräten verfügbar sind und bei einem Gerätewechsel
+    erhalten bleiben. Verantwortlich für die Speicherung ist Apple im Rahmen deines Apple-Kontos;
+    ich habe keinen Zugriff auf diese Daten und kann sie weder einsehen noch auswerten.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Du kannst die Synchronisation jederzeit in den
+    iOS-Systemeinstellungen abschalten.
+  </p>
+
+  <h3>2.3 Fotos und Kamera</h3>
+  <p>
+    Du kannst Fotos aufnehmen oder aus deiner Mediathek auswählen, um sie an ein Glas, eine
+    Fütterung oder einen Rise zu hängen. Der Zugriff erfolgt nur nach deiner ausdrücklichen
+    Freigabe durch iOS und nur für das jeweils von dir gewählte Bild. Die Fotos werden im
+    App-Container gespeichert (und ggf. gemäß 2.2 in deine iCloud synchronisiert). Sie werden
+    nicht an mich oder Dritte übertragen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+  </p>
+
+  <h3>2.4 Standort und Wettervorhersage (optional)</h3>
+  <p>
+    Die Funktion „Weather heads-up“ ist standardmäßig deaktiviert. Wenn du sie einschaltest,
+    ermittelt die App einmal täglich deinen ungefähren Standort (bewusst reduzierte Genauigkeit,
+    <code>kCLLocationAccuracyReduced</code>) und ruft damit die Wettervorhersage bei
+    <strong>Open-Meteo</strong> ab. Die Koordinaten werden vor dem Aufruf auf zwei Nachkommastellen
+    gekürzt (Genauigkeit von etwa einem Kilometer). Übertragen werden ausschließlich diese
+    gekürzten Koordinaten — keine Kennung, kein Name, keine Gerätedaten. Auch <em>gespeichert</em>
+    wird nur der gekürzte Wert: Er wird als zuletzt bekannte Region vorgehalten, damit die Abfrage
+    auch im Hintergrund funktioniert. Eine genaue Position wird zu keinem Zeitpunkt abgelegt.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch Aktivieren der Funktion und
+    Erteilen der iOS-Ortungsfreigabe). Du kannst die Funktion jederzeit in der App abschalten
+    oder die Ortungsfreigabe in den iOS-Einstellungen entziehen.
+  </p>
+
+  <h3>2.5 Käufe und Abonnements</h3>
+  <p>
+    Der Kauf von „Fermento Plus“ läuft über den Apple App Store. Apple wickelt Zahlung und
+    Abrechnung ab; ich erhalte von Apple keine Zahlungsdaten, sondern lediglich aggregierte
+    Verkaufsstatistiken ohne Personenbezug.
+  </p>
+  <p>
+    Zur Prüfung und Verwaltung des Abo-Status setze ich <strong>RevenueCat</strong> als
+    Auftragsverarbeiter ein. Dabei werden eine von RevenueCat vergebene, zufällige
+    App-Nutzer-Kennung sowie der von Apple ausgestellte Kaufbeleg verarbeitet. Es werden keine
+    E-Mail-Adressen, Namen oder Zahlungsdaten an RevenueCat übermittelt. Zweck ist es,
+    freigeschaltete Funktionen korrekt zuzuordnen und Käufe wiederherstellen zu können.
+    Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+  </p>
+
+  <h3>2.6 Mitteilungen</h3>
+  <p>
+    Alle Erinnerungen (Fütterung, Burp, Kühlschrank-Wecker, Wetter-Hinweis, Backup-Erinnerung)
+    sind <em>lokale</em> Mitteilungen, die dein Gerät selbst plant. Es gibt keinen Push-Server
+    und keine Übertragung an mich. Die Freigabe erteilst du über iOS und kannst sie dort
+    jederzeit widerrufen.
+  </p>
+
+  <h2>3. Kein Tracking, keine Werbung, keine Analyse</h2>
+  <p>
+    Fermento enthält keine Werbung, kein Analyse- oder Crash-Reporting-SDK, keine Social-Media-
+    Plugins und kein geräteübergreifendes Tracking. Es wird keine Werbe-ID (IDFA) verwendet und
+    kein App-Tracking-Transparency-Dialog angezeigt, weil kein Tracking stattfindet.
+  </p>
+
+  <h2>4. Empfänger und Auftragsverarbeiter</h2>
+  <table>
+    <tr><th>Empfänger</th><th>Zweck</th><th>Übermittelte Daten</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>App-Vertrieb, Kaufabwicklung, optionale iCloud-Synchronisation</td>
+      <td>Kauf- und Kontodaten im Rahmen deines Apple-Kontos; bei aktivierter Synchronisation deine Ferment-Daten in deiner privaten iCloud</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (USA)</td>
+      <td>Verwaltung des Abo-Status, Wiederherstellung von Käufen</td>
+      <td>zufällige App-Nutzer-Kennung, Apple-Kaufbeleg</td>
+    </tr>
+    <tr>
+      <td>Open-Meteo (Open-Meteo.com, Schweiz)</td>
+      <td>Wettervorhersage für den optionalen Hitze-/Kältehinweis</td>
+      <td>auf zwei Nachkommastellen gekürzte Koordinaten</td>
+    </tr>
+  </table>
+  <p>
+    Bei RevenueCat erfolgt eine Verarbeitung in den USA. Die Übermittlung wird auf die
+    Standardvertragsklauseln der EU-Kommission gestützt. Mit RevenueCat besteht ein Vertrag zur
+    Auftragsverarbeitung.
+  </p>
+
+  <h2>5. Speicherdauer</h2>
+  <p>
+    Deine Ferment-Daten bleiben gespeichert, bis du sie in der App löschst oder die App
+    deinstallierst. Beim Deinstallieren werden die lokalen Daten von iOS entfernt; in iCloud
+    gesicherte Daten löschst du über die iOS-Einstellungen (Apple-ID → iCloud → Speicher
+    verwalten). Der Standort wird nur als letzter bekannter Wert vorgehalten und mit jeder
+    Abfrage überschrieben. Bei RevenueCat gespeicherte Kaufinformationen werden für die Dauer
+    des Abos und darüber hinaus im Rahmen der handels- und steuerrechtlichen Pflichten
+    aufbewahrt.
+  </p>
+
+  <h2>6. Deine Rechte</h2>
+  <p>
+    Du hast das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17),
+    Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch
+    (Art. 21 DSGVO). Erteilte Einwilligungen kannst du jederzeit mit Wirkung für die Zukunft
+    widerrufen. Da ich selbst keine personenbezogenen Daten von dir speichere, kann ich
+    Auskunfts- oder Löschanfragen zu deinen Ferment-Daten praktisch nicht beantworten — diese
+    Daten liegen ausschließlich bei dir. Über die Funktion „Backup &amp; Export“ in der App kannst
+    du jederzeit selbst eine vollständige CSV-Kopie deiner Protokolle erstellen.
+  </p>
+  <p>
+    Dir steht zudem ein Beschwerderecht bei einer Aufsichtsbehörde zu, etwa beim Bayerischen
+    Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.
+  </p>
+
+  <h2>7. Kinder</h2>
+  <p>
+    Fermento richtet sich nicht an Kinder unter 16 Jahren. Es werden wissentlich keine Daten von
+    Kindern erhoben.
+  </p>
+
+  <h2>8. Änderungen dieser Erklärung</h2>
+  <p>
+    Diese Erklärung wird angepasst, wenn sich Funktionen oder Rechtslage ändern. Maßgeblich ist
+    die jeweils hier veröffentlichte Fassung mit dem oben genannten Stand.
+  </p>
+
+  <h2>9. Sprachfassungen</h2>
+  <p>
+    Diese Erklärung liegt auf Deutsch, Englisch, Spanisch, Französisch, Italienisch und
+    Niederländisch vor. Bei Abweichungen ist die deutsche
+    Fassung maßgeblich.
+  </p>
+</section>
+
+<section data-lang="en">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 8 September 2026 · applies to the iOS app “Fermento”</p>
+
+  <div class="highlight">
+    <strong>In short:</strong> Fermento keeps your jars, logs and photos on your device. There is
+    no server of mine, no tracking, no advertising and no analytics. If you have iCloud enabled,
+    Apple syncs your data to your private iCloud — I have no access to it. Only two things ever
+    leave your device: an approximate location for the optional weather forecast, and purchase
+    information for subscription management.
+  </div>
+
+  <h2>1. Controller</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstrasse 15<br>
+    90429 Nuremberg<br>
+    Germany<br>
+    Email: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. What is processed and why</h2>
+
+  <h3>2.1 Your ferment data (on device only)</h3>
+  <p>
+    Everything you create in the app — jars, names, feeds, notes, health checks, rise values,
+    badges, streaks, settings and photos — is stored solely in your device's app container. This
+    data is never transmitted to me. Legal basis: Art. 6(1)(b) GDPR (performance of the contract).
+  </p>
+
+  <h3>2.2 iCloud sync (optional, under your control)</h3>
+  <p>
+    If you have enabled iCloud and iCloud Drive for Fermento in your iOS settings, your ferment
+    data is synced through Apple's CloudKit into your <em>private</em> iCloud database so that it
+    is available across your devices and survives a device change. Apple stores this data as part
+    of your Apple account; I have no access to it and cannot read or analyse it. Legal basis:
+    Art. 6(1)(b) GDPR. You can turn sync off at any time in the iOS system settings.
+  </p>
+
+  <h3>2.3 Photos and camera</h3>
+  <p>
+    You can take photos or pick them from your library to attach them to a jar, a feed or a rise.
+    Access happens only after you explicitly grant it through iOS, and only for the image you
+    select. Photos are stored in the app container (and, where enabled, synced to your iCloud per
+    2.2). They are never transmitted to me or to third parties. Legal basis: Art. 6(1)(b) GDPR.
+  </p>
+
+  <h3>2.4 Location and weather forecast (optional)</h3>
+  <p>
+    The “Weather heads-up” feature is off by default. If you enable it, the app determines your
+    approximate location once per day (deliberately reduced accuracy,
+    <code>kCLLocationAccuracyReduced</code>) and uses it to request a forecast from
+    <strong>Open-Meteo</strong>. Coordinates are truncated to two decimal places before the request
+    (roughly one-kilometre precision). Only those truncated coordinates are transmitted — no
+    identifier, no name, no device data. The truncated value is also the only one <em>stored</em>:
+    it is kept as the last known region so the check works in the background too. A precise
+    position is never written down. Legal basis: Art. 6(1)(a) GDPR (consent, given by enabling the
+    feature and granting the iOS location permission). You can disable the feature in the app or
+    revoke the location permission in iOS at any time.
+  </p>
+
+  <h3>2.5 Purchases and subscriptions</h3>
+  <p>
+    “Fermento Plus” is purchased through the Apple App Store. Apple handles payment and billing;
+    I receive no payment data from Apple, only aggregated, non-personal sales statistics.
+  </p>
+  <p>
+    To verify and manage subscription status I use <strong>RevenueCat</strong> as a processor. This
+    involves a random app user identifier assigned by RevenueCat and the purchase receipt issued
+    by Apple. No email addresses, names or payment details are transmitted to RevenueCat. The
+    purpose is to unlock the correct features and to let you restore purchases. Legal basis:
+    Art. 6(1)(b) GDPR.
+  </p>
+
+  <h3>2.6 Notifications</h3>
+  <p>
+    All reminders (feeding, burping, fridge wake-up, weather heads-up, backup reminder) are
+    <em>local</em> notifications scheduled by your device itself. There is no push server and no
+    transmission to me. You grant permission through iOS and can withdraw it there at any time.
+  </p>
+
+  <h2>3. No tracking, no advertising, no analytics</h2>
+  <p>
+    Fermento contains no advertising, no analytics or crash-reporting SDK, no social media plugins
+    and no cross-device tracking. No advertising identifier (IDFA) is used and no App Tracking
+    Transparency prompt is shown, because no tracking takes place.
+  </p>
+
+  <h2>4. Recipients and processors</h2>
+  <table>
+    <tr><th>Recipient</th><th>Purpose</th><th>Data transmitted</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>App distribution, purchase processing, optional iCloud sync</td>
+      <td>purchase and account data within your Apple account; where sync is enabled, your ferment data in your private iCloud</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (USA)</td>
+      <td>Subscription status management, purchase restoration</td>
+      <td>random app user identifier, Apple purchase receipt</td>
+    </tr>
+    <tr>
+      <td>Open-Meteo (Open-Meteo.com, Switzerland)</td>
+      <td>Weather forecast for the optional heat/cold heads-up</td>
+      <td>coordinates truncated to two decimal places</td>
+    </tr>
+  </table>
+  <p>
+    RevenueCat processes data in the USA. The transfer is based on the European Commission's
+    Standard Contractual Clauses. A data processing agreement is in place with RevenueCat.
+  </p>
+
+  <h2>5. Retention</h2>
+  <p>
+    Your ferment data remains stored until you delete it in the app or uninstall the app.
+    Uninstalling removes the local data; data held in iCloud is deleted through the iOS settings
+    (Apple ID → iCloud → Manage Storage). The location is only kept as a last known value and is
+    overwritten with every check. Purchase information held by RevenueCat is retained for the
+    duration of the subscription and beyond as required by commercial and tax law.
+  </p>
+
+  <h2>6. Your rights</h2>
+  <p>
+    You have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17),
+    restriction of processing (Art. 18), data portability (Art. 20) and objection (Art. 21 GDPR).
+    You may withdraw consent at any time with effect for the future. Since I do not store any
+    personal data about you myself, I am practically unable to answer access or erasure requests
+    regarding your ferment data — that data resides solely with you. The app's “Backup & export”
+    feature lets you create a complete CSV copy of your logs at any time.
+  </p>
+  <p>
+    You also have the right to lodge a complaint with a supervisory authority, for example the
+    Bavarian Data Protection Authority (BayLDA), Promenade 18, 91522 Ansbach, Germany.
+  </p>
+
+  <h2>7. Children</h2>
+  <p>
+    Fermento is not directed at children under the age of 16. No data from children is knowingly
+    collected.
+  </p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>
+    This policy will be updated when features or the legal situation change. The version published
+    here, bearing the date above, is the applicable one.
+  </p>
+
+  <h2>9. Language versions</h2>
+  <p>
+    This policy is available in German, English, Spanish, French, Italian and Dutch. In the event of discrepancies, the German
+    version prevails.
+  </p>
+</section>
+
+
+<section data-lang="es">
+  <h1>Política de privacidad</h1>
+  <p class="updated">Actualizada el 8 de septiembre de 2026 · se aplica a la app para iOS «Fermento»</p>
+
+  <div class="highlight">
+    <strong>En resumen:</strong> Fermento guarda tus tarros, registros y fotos en tu dispositivo.
+    No hay ningún servidor mío, ni rastreo, ni publicidad, ni servicios de analítica. Si tienes
+    iCloud activado, Apple sincroniza tus datos en tu iCloud privado, al que yo no tengo acceso.
+    Solo dos cosas salen de tu dispositivo: una ubicación aproximada para la previsión
+    meteorológica opcional y datos de compra para gestionar la suscripción.
+  </div>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Alemania<br>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. Qué datos se tratan y por qué</h2>
+
+  <h3>2.1 Tus datos de fermentación (solo en el dispositivo)</h3>
+  <p>
+    Todo lo que creas en la app —tarros, nombres, alimentaciones, notas, chequeos de salud,
+    valores de subida, insignias, rachas, ajustes y fotos— se guarda exclusivamente en local, en
+    el contenedor de la app de tu dispositivo. Estos datos no se me transmiten. Base jurídica:
+    art. 6.1.b RGPD (ejecución del contrato de uso).
+  </p>
+
+  <h3>2.2 Sincronización con iCloud (opcional, controlada por ti)</h3>
+  <p>
+    Si has activado iCloud e iCloud Drive para Fermento en los ajustes de iOS, tus datos de
+    fermentación se sincronizan mediante CloudKit de Apple en tu base de datos <em>privada</em> de
+    iCloud, para que estén disponibles en tus dispositivos y se conserven al cambiar de equipo.
+    El responsable del almacenamiento es Apple, en el marco de tu cuenta de Apple; yo no tengo
+    acceso a esos datos y no puedo consultarlos ni analizarlos. Base jurídica: art. 6.1.b RGPD.
+    Puedes desactivar la sincronización en cualquier momento en los ajustes del sistema iOS.
+  </p>
+
+  <h3>2.3 Fotos y cámara</h3>
+  <p>
+    Puedes hacer fotos o elegirlas de tu fototeca para adjuntarlas a un tarro, una alimentación o
+    una subida. El acceso solo se produce tras tu autorización expresa a través de iOS y
+    únicamente para la imagen que elijas. Las fotos se guardan en el contenedor de la app (y, en
+    su caso, se sincronizan con tu iCloud según 2.2). No se me transmiten ni a mí ni a terceros.
+    Base jurídica: art. 6.1.b RGPD.
+  </p>
+
+  <h3>2.4 Ubicación y previsión meteorológica (opcional)</h3>
+  <p>
+    La función «Weather heads-up» está desactivada por defecto. Si la activas, la app determina
+    una vez al día tu ubicación aproximada (precisión deliberadamente reducida,
+    <code>kCLLocationAccuracyReduced</code>) y con ella consulta la previsión meteorológica en
+    <strong>Open-Meteo</strong>. Las coordenadas se recortan a dos decimales antes de la consulta
+    (precisión de aproximadamente un kilómetro). Solo se transmiten esas coordenadas recortadas:
+    ningún identificador, ningún nombre, ningún dato del dispositivo. También se <em>guarda</em>
+    únicamente el valor recortado, que se conserva como última región conocida para que la
+    consulta funcione también en segundo plano. En ningún momento se almacena una posición
+    exacta. Base jurídica: art. 6.1.a RGPD (consentimiento, otorgado al activar la función y
+    conceder el permiso de ubicación de iOS). Puedes desactivar la función en la app o retirar el
+    permiso de ubicación en los ajustes de iOS en cualquier momento.
+  </p>
+
+  <h3>2.5 Compras y suscripciones</h3>
+  <p>
+    La compra de «Fermento Plus» se realiza a través del App Store de Apple. Apple gestiona el
+    pago y la facturación; yo no recibo de Apple datos de pago, sino únicamente estadísticas de
+    venta agregadas y sin referencia a personas.
+  </p>
+  <p>
+    Para comprobar y gestionar el estado de la suscripción utilizo <strong>RevenueCat</strong>
+    como encargado del tratamiento. En ese proceso se tratan un identificador de usuario de la
+    app aleatorio asignado por RevenueCat y el comprobante de compra emitido por Apple. No se
+    transmiten a RevenueCat direcciones de correo, nombres ni datos de pago. La finalidad es
+    asignar correctamente las funciones desbloqueadas y poder restaurar compras. Base jurídica:
+    art. 6.1.b RGPD.
+  </p>
+
+  <h3>2.6 Notificaciones</h3>
+  <p>
+    Todos los recordatorios (alimentación, purga, despertador de nevera, aviso del tiempo,
+    recordatorio de copia de seguridad) son notificaciones <em>locales</em> que programa tu propio
+    dispositivo. No hay servidor de notificaciones push ni transmisión hacia mí. El permiso lo
+    concedes a través de iOS y puedes revocarlo allí en cualquier momento.
+  </p>
+
+  <h2>3. Sin rastreo, sin publicidad, sin analítica</h2>
+  <p>
+    Fermento no contiene publicidad, ni SDK de analítica o de informes de fallos, ni complementos
+    de redes sociales, ni rastreo entre dispositivos. No se utiliza identificador publicitario
+    (IDFA) ni se muestra el diálogo de App Tracking Transparency, porque no hay ningún rastreo.
+  </p>
+
+  <h2>4. Destinatarios y encargados del tratamiento</h2>
+  <table>
+    <tr><th>Destinatario</th><th>Finalidad</th><th>Datos transmitidos</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>Distribución de la app, gestión de compras, sincronización opcional con iCloud</td>
+      <td>Datos de compra y de cuenta en el marco de tu cuenta de Apple; con la sincronización activada, tus datos de fermentación en tu iCloud privado</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (EE. UU.)</td>
+      <td>Gestión del estado de la suscripción, restauración de compras</td>
+      <td>identificador de usuario de la app aleatorio, comprobante de compra de Apple</td>
+    </tr>
+    <tr>
+      <td>Open-Meteo (Open-Meteo.com, Suiza)</td>
+      <td>Previsión meteorológica para el aviso opcional de calor o frío</td>
+      <td>coordenadas recortadas a dos decimales</td>
+    </tr>
+  </table>
+  <p>
+    En el caso de RevenueCat el tratamiento se realiza en Estados Unidos. La transferencia se basa
+    en las cláusulas contractuales tipo de la Comisión Europea. Con RevenueCat existe un contrato
+    de encargo del tratamiento.
+  </p>
+
+  <h2>5. Plazo de conservación</h2>
+  <p>
+    Tus datos de fermentación permanecen guardados hasta que los borres en la app o desinstales la
+    app. Al desinstalarla, iOS elimina los datos locales; los datos guardados en iCloud los borras
+    desde los ajustes de iOS (ID de Apple → iCloud → Gestionar almacenamiento). La ubicación solo
+    se conserva como último valor conocido y se sobrescribe con cada consulta. La información de
+    compra almacenada en RevenueCat se conserva mientras dure la suscripción y, más allá, en el
+    marco de las obligaciones mercantiles y fiscales.
+  </p>
+
+  <h2>6. Tus derechos</h2>
+  <p>
+    Tienes derecho de acceso (art. 15), rectificación (art. 16), supresión (art. 17), limitación
+    del tratamiento (art. 18), portabilidad de los datos (art. 20) y oposición (art. 21 RGPD).
+    Puedes retirar en cualquier momento los consentimientos otorgados, con efectos para el futuro.
+    Dado que yo mismo no almaceno datos personales tuyos, en la práctica no puedo responder a
+    solicitudes de acceso o supresión relativas a tus datos de fermentación: esos datos están
+    únicamente en tu poder. Con la función «Copia y exportación» de la app puedes crear en
+    cualquier momento una copia completa en CSV de tus registros.
+  </p>
+  <p>
+    Además, tienes derecho a presentar una reclamación ante una autoridad de control, por ejemplo
+    ante la Oficina Estatal de Baviera para la Supervisión de la Protección de Datos (BayLDA),
+    Promenade 18, 91522 Ansbach, Alemania.
+  </p>
+
+  <h2>7. Menores</h2>
+  <p>
+    Fermento no está dirigida a menores de 16 años. No se recopilan conscientemente datos de
+    menores.
+  </p>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>
+    Esta política se adapta cuando cambian las funciones o la situación jurídica. Rige la versión
+    publicada aquí en cada momento, con la fecha indicada arriba.
+  </p>
+
+  <h2>9. Versiones lingüísticas</h2>
+  <p>
+    Esta política está disponible en alemán, inglés, español, francés, italiano y neerlandés. En
+    caso de discrepancias, prevalece la versión alemana.
+  </p>
+</section>
+
+<section data-lang="fr">
+  <h1>Politique de confidentialité</h1>
+  <p class="updated">Mise à jour le 8 septembre 2026 · s'applique à l'app iOS « Fermento »</p>
+
+  <div class="highlight">
+    <strong>En bref :</strong> Fermento enregistre tes bocaux, tes journaux et tes photos sur ton
+    appareil. Il n'y a aucun serveur m'appartenant, aucun pistage, aucune publicité et aucun
+    service d'analyse. Si tu as activé iCloud, Apple synchronise tes données dans ton iCloud
+    privé, auquel je n'ai pas accès. Deux choses seulement quittent ton appareil : une position
+    approximative pour la météo facultative et des informations d'achat pour la gestion de
+    l'abonnement.
+  </div>
+
+  <h2>1. Responsable du traitement</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Allemagne<br>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. Quelles données sont traitées et pourquoi</h2>
+
+  <h3>2.1 Tes données de fermentation (uniquement sur l'appareil)</h3>
+  <p>
+    Tout ce que tu crées dans l'app — bocaux, noms, nourrissages, notes, bilans de santé, valeurs
+    de pousse, badges, séries, réglages et photos — est enregistré exclusivement en local, dans le
+    conteneur de l'app sur ton appareil. Ces données ne me sont pas transmises. Base légale :
+    art. 6, § 1, point b du RGPD (exécution du contrat d'utilisation).
+  </p>
+
+  <h3>2.2 Synchronisation iCloud (facultative, pilotée par toi)</h3>
+  <p>
+    Si tu as activé iCloud et iCloud Drive pour Fermento dans les réglages iOS, tes données de
+    fermentation sont synchronisées via CloudKit d'Apple dans ta base de données iCloud
+    <em>privée</em>, afin d'être disponibles sur tes appareils et conservées en cas de changement
+    d'appareil. Apple est responsable de ce stockage dans le cadre de ton compte Apple ; je n'ai
+    aucun accès à ces données et ne peux ni les consulter ni les analyser. Base légale : art. 6,
+    § 1, point b du RGPD. Tu peux désactiver la synchronisation à tout moment dans les réglages
+    système d'iOS.
+  </p>
+
+  <h3>2.3 Photos et appareil photo</h3>
+  <p>
+    Tu peux prendre des photos ou en choisir dans ta photothèque pour les rattacher à un bocal, à
+    un nourrissage ou à une pousse. L'accès n'a lieu qu'après ton autorisation expresse via iOS et
+    uniquement pour l'image que tu as choisie. Les photos sont enregistrées dans le conteneur de
+    l'app (et, le cas échéant, synchronisées dans ton iCloud conformément au point 2.2). Elles ne
+    sont transmises ni à moi ni à des tiers. Base légale : art. 6, § 1, point b du RGPD.
+  </p>
+
+  <h3>2.4 Position et prévisions météo (facultatif)</h3>
+  <p>
+    La fonction « Weather heads-up » est désactivée par défaut. Si tu l'actives, l'app détermine
+    une fois par jour ta position approximative (précision volontairement réduite,
+    <code>kCLLocationAccuracyReduced</code>) et interroge avec elle les prévisions de
+    <strong>Open-Meteo</strong>. Les coordonnées sont arrondies à deux décimales avant la requête
+    (précision d'environ un kilomètre). Seules ces coordonnées arrondies sont transmises — aucun
+    identifiant, aucun nom, aucune donnée d'appareil. Seule la valeur arrondie est également
+    <em>enregistrée</em> : elle est conservée comme dernière région connue afin que la requête
+    fonctionne aussi en arrière-plan. Aucune position précise n'est stockée à aucun moment. Base
+    légale : art. 6, § 1, point a du RGPD (consentement, donné en activant la fonction et en
+    accordant l'autorisation de localisation iOS). Tu peux désactiver la fonction dans l'app ou
+    retirer l'autorisation de localisation dans les réglages iOS à tout moment.
+  </p>
+
+  <h3>2.5 Achats et abonnements</h3>
+  <p>
+    L'achat de « Fermento Plus » passe par l'App Store d'Apple. Apple gère le paiement et la
+    facturation ; je ne reçois d'Apple aucune donnée de paiement, mais uniquement des
+    statistiques de vente agrégées et sans lien avec une personne.
+  </p>
+  <p>
+    Pour vérifier et gérer le statut de l'abonnement, je fais appel à <strong>RevenueCat</strong>
+    en tant que sous-traitant. Sont alors traités un identifiant d'utilisateur d'app aléatoire
+    attribué par RevenueCat ainsi que le justificatif d'achat délivré par Apple. Aucune adresse
+    e-mail, aucun nom et aucune donnée de paiement ne sont transmis à RevenueCat. La finalité est
+    d'attribuer correctement les fonctions débloquées et de permettre la restauration des achats.
+    Base légale : art. 6, § 1, point b du RGPD.
+  </p>
+
+  <h3>2.6 Notifications</h3>
+  <p>
+    Tous les rappels (nourrissage, dégazage, réveil du frigo, alerte météo, rappel de sauvegarde)
+    sont des notifications <em>locales</em> planifiées par ton appareil lui-même. Il n'y a ni
+    serveur de notifications push ni transmission vers moi. Tu accordes l'autorisation via iOS et
+    peux la révoquer là à tout moment.
+  </p>
+
+  <h2>3. Pas de pistage, pas de publicité, pas d'analyse</h2>
+  <p>
+    Fermento ne contient ni publicité, ni SDK d'analyse ou de rapport de plantage, ni plugin de
+    réseau social, ni pistage inter-appareils. Aucun identifiant publicitaire (IDFA) n'est utilisé
+    et aucune fenêtre App Tracking Transparency n'est affichée, puisqu'il n'y a aucun pistage.
+  </p>
+
+  <h2>4. Destinataires et sous-traitants</h2>
+  <table>
+    <tr><th>Destinataire</th><th>Finalité</th><th>Données transmises</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>Distribution de l'app, traitement des achats, synchronisation iCloud facultative</td>
+      <td>Données d'achat et de compte dans le cadre de ton compte Apple ; si la synchronisation est activée, tes données de fermentation dans ton iCloud privé</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (États-Unis)</td>
+      <td>Gestion du statut d'abonnement, restauration des achats</td>
+      <td>identifiant d'utilisateur d'app aléatoire, justificatif d'achat Apple</td>
+    </tr>
+    <tr>
+      <td>Open-Meteo (Open-Meteo.com, Suisse)</td>
+      <td>Prévisions météo pour l'alerte facultative de canicule ou de froid</td>
+      <td>coordonnées arrondies à deux décimales</td>
+    </tr>
+  </table>
+  <p>
+    Chez RevenueCat, le traitement a lieu aux États-Unis. Le transfert s'appuie sur les clauses
+    contractuelles types de la Commission européenne. Un contrat de sous-traitance a été conclu
+    avec RevenueCat.
+  </p>
+
+  <h2>5. Durée de conservation</h2>
+  <p>
+    Tes données de fermentation restent enregistrées jusqu'à ce que tu les supprimes dans l'app ou
+    que tu désinstalles celle-ci. À la désinstallation, iOS supprime les données locales ; les
+    données sauvegardées dans iCloud se suppriment via les réglages iOS (identifiant Apple →
+    iCloud → Gérer le stockage). La position n'est conservée que comme dernière valeur connue et
+    est écrasée à chaque requête. Les informations d'achat conservées chez RevenueCat le sont
+    pendant la durée de l'abonnement et au-delà, dans le cadre des obligations commerciales et
+    fiscales.
+  </p>
+
+  <h2>6. Tes droits</h2>
+  <p>
+    Tu disposes d'un droit d'accès (art. 15), de rectification (art. 16), d'effacement (art. 17),
+    de limitation du traitement (art. 18), à la portabilité des données (art. 20) et d'opposition
+    (art. 21 du RGPD). Tu peux retirer à tout moment les consentements donnés, avec effet pour
+    l'avenir. Comme je ne conserve moi-même aucune donnée personnelle te concernant, je ne peux
+    pratiquement pas répondre aux demandes d'accès ou d'effacement portant sur tes données de
+    fermentation : ces données se trouvent uniquement chez toi. La fonction « Sauvegarde et
+    export » de l'app te permet de créer à tout moment une copie CSV complète de tes journaux.
+  </p>
+  <p>
+    Tu disposes en outre d'un droit de réclamation auprès d'une autorité de contrôle, par exemple
+    l'Office bavarois de contrôle de la protection des données (BayLDA), Promenade 18,
+    91522 Ansbach, Allemagne.
+  </p>
+
+  <h2>7. Enfants</h2>
+  <p>
+    Fermento ne s'adresse pas aux enfants de moins de 16 ans. Aucune donnée d'enfant n'est
+    collectée sciemment.
+  </p>
+
+  <h2>8. Modifications de la présente politique</h2>
+  <p>
+    La présente politique est adaptée lorsque les fonctions ou la situation juridique évoluent.
+    Fait foi la version publiée ici, à la date indiquée ci-dessus.
+  </p>
+
+  <h2>9. Versions linguistiques</h2>
+  <p>
+    La présente politique existe en allemand, anglais, espagnol, français, italien et néerlandais.
+    En cas de divergence, la version allemande fait foi.
+  </p>
+</section>
+
+<section data-lang="it">
+  <h1>Informativa sulla privacy</h1>
+  <p class="updated">Aggiornata l'8 settembre 2026 · vale per l'app iOS «Fermento»</p>
+
+  <div class="highlight">
+    <strong>In breve:</strong> Fermento salva i tuoi barattoli, i registri e le foto sul tuo
+    dispositivo. Non esiste alcun server mio, nessun tracciamento, nessuna pubblicità e nessun
+    servizio di analisi. Se hai attivato iCloud, Apple sincronizza i tuoi dati nel tuo iCloud
+    privato, al quale io non ho accesso. Solo due cose lasciano il tuo dispositivo: una posizione
+    approssimativa per le previsioni meteo facoltative e i dati d'acquisto per la gestione
+    dell'abbonamento.
+  </div>
+
+  <h2>1. Titolare del trattamento</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Germania<br>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. Quali dati vengono trattati e perché</h2>
+
+  <h3>2.1 I tuoi dati di fermentazione (solo sul dispositivo)</h3>
+  <p>
+    Tutto ciò che crei nell'app — barattoli, nomi, rinfreschi, note, controlli di salute, valori
+    di crescita, distintivi, serie, impostazioni e foto — viene salvato esclusivamente in locale,
+    nel contenitore dell'app sul tuo dispositivo. Questi dati non mi vengono trasmessi. Base
+    giuridica: art. 6, par. 1, lett. b GDPR (esecuzione del contratto d'uso).
+  </p>
+
+  <h3>2.2 Sincronizzazione iCloud (facoltativa, controllata da te)</h3>
+  <p>
+    Se hai attivato iCloud e iCloud Drive per Fermento nelle impostazioni di iOS, i tuoi dati di
+    fermentazione vengono sincronizzati tramite CloudKit di Apple nel tuo database iCloud
+    <em>privato</em>, così da essere disponibili sui tuoi dispositivi e da conservarsi in caso di
+    cambio dispositivo. Della conservazione è responsabile Apple nell'ambito del tuo account
+    Apple; io non ho accesso a questi dati e non posso né consultarli né analizzarli. Base
+    giuridica: art. 6, par. 1, lett. b GDPR. Puoi disattivare la sincronizzazione in qualsiasi
+    momento nelle impostazioni di sistema di iOS.
+  </p>
+
+  <h3>2.3 Foto e fotocamera</h3>
+  <p>
+    Puoi scattare foto o sceglierle dalla tua libreria per allegarle a un barattolo, a un
+    rinfresco o a una crescita. L'accesso avviene solo dopo la tua autorizzazione esplicita
+    tramite iOS e solo per l'immagine che hai scelto. Le foto vengono salvate nel contenitore
+    dell'app (ed eventualmente sincronizzate nel tuo iCloud secondo il punto 2.2). Non vengono
+    trasmesse né a me né a terzi. Base giuridica: art. 6, par. 1, lett. b GDPR.
+  </p>
+
+  <h3>2.4 Posizione e previsioni meteo (facoltativo)</h3>
+  <p>
+    La funzione «Weather heads-up» è disattivata per impostazione predefinita. Se la attivi,
+    l'app determina una volta al giorno la tua posizione approssimativa (precisione
+    volutamente ridotta, <code>kCLLocationAccuracyReduced</code>) e con essa richiede le
+    previsioni a <strong>Open-Meteo</strong>. Le coordinate vengono arrotondate a due decimali
+    prima della richiesta (precisione di circa un chilometro). Vengono trasmesse esclusivamente
+    queste coordinate arrotondate: nessun identificativo, nessun nome, nessun dato del
+    dispositivo. Anche <em>salvato</em> è solo il valore arrotondato, conservato come ultima
+    regione nota affinché la richiesta funzioni anche in background. In nessun momento viene
+    memorizzata una posizione precisa. Base giuridica: art. 6, par. 1, lett. a GDPR (consenso,
+    prestato attivando la funzione e concedendo l'autorizzazione alla localizzazione di iOS).
+    Puoi disattivare la funzione nell'app o revocare l'autorizzazione alla localizzazione nelle
+    impostazioni di iOS in qualsiasi momento.
+  </p>
+
+  <h3>2.5 Acquisti e abbonamenti</h3>
+  <p>
+    L'acquisto di «Fermento Plus» avviene tramite l'App Store di Apple. Apple gestisce pagamento
+    e fatturazione; da Apple non ricevo dati di pagamento, ma soltanto statistiche di vendita
+    aggregate e prive di riferimenti personali.
+  </p>
+  <p>
+    Per verificare e gestire lo stato dell'abbonamento mi avvalgo di <strong>RevenueCat</strong>
+    come responsabile del trattamento. Vengono trattati un identificativo utente dell'app casuale
+    assegnato da RevenueCat e la ricevuta d'acquisto rilasciata da Apple. A RevenueCat non
+    vengono trasmessi indirizzi e-mail, nomi o dati di pagamento. La finalità è attribuire
+    correttamente le funzioni sbloccate e consentire il ripristino degli acquisti. Base giuridica:
+    art. 6, par. 1, lett. b GDPR.
+  </p>
+
+  <h3>2.6 Notifiche</h3>
+  <p>
+    Tutti i promemoria (rinfresco, sfiato, sveglia dal frigo, avviso meteo, promemoria di backup)
+    sono notifiche <em>locali</em> pianificate dal tuo stesso dispositivo. Non esiste alcun server
+    push né alcuna trasmissione verso di me. L'autorizzazione la concedi tramite iOS e puoi
+    revocarla lì in qualsiasi momento.
+  </p>
+
+  <h2>3. Nessun tracciamento, nessuna pubblicità, nessuna analisi</h2>
+  <p>
+    Fermento non contiene pubblicità, né SDK di analisi o di segnalazione dei crash, né plugin di
+    social media, né tracciamento tra dispositivi. Non viene utilizzato alcun identificativo
+    pubblicitario (IDFA) e non viene mostrata alcuna finestra di App Tracking Transparency, perché
+    non avviene alcun tracciamento.
+  </p>
+
+  <h2>4. Destinatari e responsabili del trattamento</h2>
+  <table>
+    <tr><th>Destinatario</th><th>Finalità</th><th>Dati trasmessi</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>Distribuzione dell'app, gestione degli acquisti, sincronizzazione iCloud facoltativa</td>
+      <td>Dati di acquisto e di account nell'ambito del tuo account Apple; con la sincronizzazione attiva, i tuoi dati di fermentazione nel tuo iCloud privato</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (USA)</td>
+      <td>Gestione dello stato dell'abbonamento, ripristino degli acquisti</td>
+      <td>identificativo utente dell'app casuale, ricevuta d'acquisto Apple</td>
+    </tr>
+    <tr>
+      <td>Open-Meteo (Open-Meteo.com, Svizzera)</td>
+      <td>Previsioni meteo per l'avviso facoltativo di caldo o freddo</td>
+      <td>coordinate arrotondate a due decimali</td>
+    </tr>
+  </table>
+  <p>
+    Presso RevenueCat il trattamento avviene negli Stati Uniti. Il trasferimento si fonda sulle
+    clausole contrattuali tipo della Commissione europea. Con RevenueCat è in essere un contratto
+    di responsabile del trattamento.
+  </p>
+
+  <h2>5. Periodo di conservazione</h2>
+  <p>
+    I tuoi dati di fermentazione restano salvati finché non li elimini nell'app o non disinstalli
+    l'app. Alla disinstallazione iOS rimuove i dati locali; i dati salvati in iCloud si eliminano
+    dalle impostazioni di iOS (ID Apple → iCloud → Gestisci spazio). La posizione viene conservata
+    solo come ultimo valore noto e viene sovrascritta a ogni richiesta. Le informazioni d'acquisto
+    conservate presso RevenueCat vengono mantenute per la durata dell'abbonamento e oltre,
+    nell'ambito degli obblighi commerciali e fiscali.
+  </p>
+
+  <h2>6. I tuoi diritti</h2>
+  <p>
+    Hai diritto di accesso (art. 15), rettifica (art. 16), cancellazione (art. 17), limitazione
+    del trattamento (art. 18), portabilità dei dati (art. 20) e opposizione (art. 21 GDPR). Puoi
+    revocare in qualsiasi momento i consensi prestati, con effetto per il futuro. Poiché io stesso
+    non conservo dati personali che ti riguardano, in pratica non posso rispondere a richieste di
+    accesso o cancellazione relative ai tuoi dati di fermentazione: quei dati si trovano
+    unicamente presso di te. Con la funzione «Backup ed esportazione» dell'app puoi creare in
+    qualsiasi momento una copia CSV completa dei tuoi registri.
+  </p>
+  <p>
+    Hai inoltre diritto di proporre reclamo a un'autorità di controllo, ad esempio all'Ufficio
+    bavarese per la vigilanza sulla protezione dei dati (BayLDA), Promenade 18, 91522 Ansbach,
+    Germania.
+  </p>
+
+  <h2>7. Minori</h2>
+  <p>
+    Fermento non si rivolge a minori di 16 anni. Non vengono raccolti consapevolmente dati di
+    minori.
+  </p>
+
+  <h2>8. Modifiche alla presente informativa</h2>
+  <p>
+    La presente informativa viene adeguata quando cambiano le funzioni o il quadro normativo. Fa
+    fede la versione qui pubblicata di volta in volta, con la data indicata sopra.
+  </p>
+
+  <h2>9. Versioni linguistiche</h2>
+  <p>
+    La presente informativa è disponibile in tedesco, inglese, spagnolo, francese, italiano e
+    neerlandese. In caso di divergenze prevale la versione tedesca.
+  </p>
+</section>
+
+<section data-lang="nl">
+  <h1>Privacyverklaring</h1>
+  <p class="updated">Bijgewerkt op 8 september 2026 · geldt voor de iOS-app 'Fermento'</p>
+
+  <div class="highlight">
+    <strong>Kort samengevat:</strong> Fermento bewaart je potten, logboeken en foto's op je
+    apparaat. Er is geen server van mij, geen tracking, geen advertenties en geen
+    analysediensten. Als je iCloud hebt ingeschakeld, synchroniseert Apple je gegevens naar je
+    privé-iCloud, waartoe ik geen toegang heb. Slechts twee dingen verlaten je apparaat: een
+    globale locatie voor de optionele weersverwachting en aankoopgegevens voor het beheer van het
+    abonnement.
+  </div>
+
+  <h2>1. Verwerkingsverantwoordelijke</h2>
+  <address>
+    Jonas Polenz<br>
+    Konradstraße 15<br>
+    90429 Nürnberg<br>
+    Duitsland<br>
+    E-Mail: <a href="mailto:jonas.polenz@software-development.net">jonas.polenz@software-development.net</a>
+  </address>
+
+  <h2>2. Welke gegevens worden verwerkt en waarom</h2>
+
+  <h3>2.1 Je fermentatiegegevens (alleen op het apparaat)</h3>
+  <p>
+    Alles wat je in de app aanmaakt — potten, namen, voedingen, notities, gezondheidschecks,
+    rijzingswaarden, badges, reeksen, instellingen en foto's — wordt uitsluitend lokaal opgeslagen
+    in de app-container op je apparaat. Deze gegevens worden niet aan mij doorgegeven.
+    Rechtsgrondslag: art. 6, lid 1, onder b AVG (uitvoering van de gebruiksovereenkomst).
+  </p>
+
+  <h3>2.2 iCloud-synchronisatie (optioneel, door jou geregeld)</h3>
+  <p>
+    Als je in de iOS-instellingen iCloud en iCloud Drive voor Fermento hebt ingeschakeld, worden
+    je fermentatiegegevens via CloudKit van Apple naar je <em>privé</em>-iCloud-database
+    gesynchroniseerd, zodat ze op je apparaten beschikbaar zijn en bij een wissel van apparaat
+    behouden blijven. Voor die opslag is Apple verantwoordelijk in het kader van je Apple-account;
+    ik heb geen toegang tot deze gegevens en kan ze niet inzien of analyseren. Rechtsgrondslag:
+    art. 6, lid 1, onder b AVG. Je kunt de synchronisatie op elk moment uitschakelen in de
+    iOS-systeeminstellingen.
+  </p>
+
+  <h3>2.3 Foto's en camera</h3>
+  <p>
+    Je kunt foto's maken of uit je bibliotheek kiezen om ze aan een pot, een voeding of een
+    rijzing te koppelen. De toegang vindt alleen plaats na je uitdrukkelijke toestemming via iOS
+    en uitsluitend voor de afbeelding die je zelf kiest. De foto's worden in de app-container
+    opgeslagen (en eventueel volgens 2.2 naar je iCloud gesynchroniseerd). Ze worden niet aan mij
+    of aan derden doorgegeven. Rechtsgrondslag: art. 6, lid 1, onder b AVG.
+  </p>
+
+  <h3>2.4 Locatie en weersverwachting (optioneel)</h3>
+  <p>
+    De functie 'Weather heads-up' staat standaard uit. Als je haar inschakelt, bepaalt de app één
+    keer per dag je globale locatie (bewust verlaagde nauwkeurigheid,
+    <code>kCLLocationAccuracyReduced</code>) en haalt daarmee de weersverwachting op bij
+    <strong>Open-Meteo</strong>. De coördinaten worden vóór de aanvraag afgerond op twee decimalen
+    (nauwkeurigheid van ongeveer een kilometer). Alleen die afgeronde coördinaten worden
+    verzonden — geen identificator, geen naam, geen apparaatgegevens. Ook <em>opgeslagen</em>
+    wordt uitsluitend de afgeronde waarde: die wordt bewaard als laatst bekende regio, zodat de
+    aanvraag ook op de achtergrond werkt. Een precieze positie wordt op geen enkel moment
+    vastgelegd. Rechtsgrondslag: art. 6, lid 1, onder a AVG (toestemming, gegeven door de functie
+    in te schakelen en de iOS-locatietoestemming te verlenen). Je kunt de functie in de app
+    uitschakelen of de locatietoestemming in de iOS-instellingen op elk moment intrekken.
+  </p>
+
+  <h3>2.5 Aankopen en abonnementen</h3>
+  <p>
+    De aankoop van 'Fermento Plus' verloopt via de App Store van Apple. Apple handelt betaling en
+    facturering af; van Apple ontvang ik geen betaalgegevens, maar uitsluitend geaggregeerde
+    verkoopstatistieken zonder persoonsgegevens.
+  </p>
+  <p>
+    Voor het controleren en beheren van de abonnementsstatus schakel ik <strong>RevenueCat</strong>
+    in als verwerker. Daarbij worden een door RevenueCat toegekende, willekeurige
+    app-gebruikersidentificator en het door Apple afgegeven aankoopbewijs verwerkt. Er worden geen
+    e-mailadressen, namen of betaalgegevens aan RevenueCat doorgegeven. Het doel is vrijgeschakelde
+    functies correct toe te wijzen en aankopen te kunnen herstellen. Rechtsgrondslag: art. 6,
+    lid 1, onder b AVG.
+  </p>
+
+  <h3>2.6 Meldingen</h3>
+  <p>
+    Alle herinneringen (voeding, ontluchten, koelkastwekker, weerwaarschuwing, back-upherinnering)
+    zijn <em>lokale</em> meldingen die je apparaat zelf inplant. Er is geen pushserver en geen
+    verzending naar mij. De toestemming geef je via iOS en je kunt haar daar op elk moment
+    intrekken.
+  </p>
+
+  <h2>3. Geen tracking, geen advertenties, geen analyse</h2>
+  <p>
+    Fermento bevat geen advertenties, geen analyse- of crashrapportage-SDK, geen social-media-
+    plug-ins en geen tracking over apparaten heen. Er wordt geen advertentie-id (IDFA) gebruikt en
+    er verschijnt geen App Tracking Transparency-venster, omdat er geen tracking plaatsvindt.
+  </p>
+
+  <h2>4. Ontvangers en verwerkers</h2>
+  <table>
+    <tr><th>Ontvanger</th><th>Doel</th><th>Doorgegeven gegevens</th></tr>
+    <tr>
+      <td>Apple Inc. / Apple Distribution International Ltd.</td>
+      <td>Distributie van de app, afhandeling van aankopen, optionele iCloud-synchronisatie</td>
+      <td>Aankoop- en accountgegevens in het kader van je Apple-account; bij ingeschakelde synchronisatie je fermentatiegegevens in je privé-iCloud</td>
+    </tr>
+    <tr>
+      <td>RevenueCat, Inc. (VS)</td>
+      <td>Beheer van de abonnementsstatus, herstel van aankopen</td>
+      <td>willekeurige app-gebruikersidentificator, Apple-aankoopbewijs</td>
+    </tr>
+    <tr>
+      <td>Open-Meteo (Open-Meteo.com, Zwitserland)</td>
+      <td>Weersverwachting voor de optionele hitte- of koudewaarschuwing</td>
+      <td>op twee decimalen afgeronde coördinaten</td>
+    </tr>
+  </table>
+  <p>
+    Bij RevenueCat vindt de verwerking plaats in de Verenigde Staten. De doorgifte is gebaseerd op
+    de modelcontractbepalingen van de Europese Commissie. Met RevenueCat is een
+    verwerkersovereenkomst gesloten.
+  </p>
+
+  <h2>5. Bewaartermijn</h2>
+  <p>
+    Je fermentatiegegevens blijven bewaard totdat je ze in de app verwijdert of de app
+    deïnstalleert. Bij deïnstallatie verwijdert iOS de lokale gegevens; in iCloud opgeslagen
+    gegevens verwijder je via de iOS-instellingen (Apple ID → iCloud → Opslag beheren). De locatie
+    wordt alleen als laatst bekende waarde bewaard en bij elke aanvraag overschreven. De bij
+    RevenueCat opgeslagen aankoopgegevens worden bewaard zolang het abonnement loopt en daarna in
+    het kader van de handels- en fiscaalrechtelijke verplichtingen.
+  </p>
+
+  <h2>6. Je rechten</h2>
+  <p>
+    Je hebt recht op inzage (art. 15), rectificatie (art. 16), verwijdering (art. 17), beperking
+    van de verwerking (art. 18), gegevensoverdraagbaarheid (art. 20) en bezwaar (art. 21 AVG).
+    Gegeven toestemmingen kun je op elk moment intrekken, met werking voor de toekomst. Omdat ik
+    zelf geen persoonsgegevens van je bewaar, kan ik verzoeken om inzage of verwijdering van je
+    fermentatiegegevens praktisch niet beantwoorden: die gegevens bevinden zich uitsluitend bij
+    jou. Met de functie 'Back-up &amp; export' in de app kun je op elk moment zelf een volledige
+    CSV-kopie van je logboeken maken.
+  </p>
+  <p>
+    Daarnaast heb je het recht een klacht in te dienen bij een toezichthoudende autoriteit,
+    bijvoorbeeld bij het Beierse landsbureau voor gegevensbeschermingstoezicht (BayLDA),
+    Promenade 18, 91522 Ansbach, Duitsland.
+  </p>
+
+  <h2>7. Kinderen</h2>
+  <p>
+    Fermento richt zich niet op kinderen onder de 16 jaar. Er worden bewust geen gegevens van
+    kinderen verzameld.
+  </p>
+
+  <h2>8. Wijzigingen in deze verklaring</h2>
+  <p>
+    Deze verklaring wordt aangepast wanneer functies of de juridische situatie veranderen.
+    Bepalend is de hier gepubliceerde versie met de hierboven vermelde datum.
+  </p>
+
+  <h2>9. Taalversies</h2>
+  <p>
+    Deze verklaring is beschikbaar in het Duits, Engels, Spaans, Frans, Italiaans en Nederlands.
+    Bij afwijkingen is de Duitse versie doorslaggevend.
+  </p>
+</section>
+
+<script>
+  document.querySelectorAll('.langbar a').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var lang = link.dataset.set;
+      document.querySelectorAll('.langbar a').forEach(function (l) { l.classList.toggle('active', l === link); });
+      document.querySelectorAll('section[data-lang]').forEach(function (s) {
+        s.classList.toggle('active', s.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+    });
+  });
+</script>
+</body>
+</html>

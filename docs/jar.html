@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fermento — Ein Glas für dich</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 480px; margin: 80px auto; padding: 0 20px; line-height: 1.6; color: #2A241D; background: #FBF3E4; text-align: center; }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  p.sub { color: rgba(42,36,29,.6); font-size: 14px; }
+  a.open { display: inline-block; margin-top: 22px; padding: 14px 22px; border-radius: 12px; background: #E4694C; border: 2px solid #2A241D; color: #FFFDF8; text-decoration: none; font-weight: 700; box-shadow: 3px 3px 0 rgba(42,36,29,.2); }
+  p.note { margin-top: 28px; font-size: 12.5px; color: rgba(42,36,29,.6); }
+  p.err { color: #B5502F; font-weight: 600; }
+</style>
+</head>
+<body>
+  <h1>Fermento</h1>
+  <p class="sub" id="lead">Jemand gibt dir einen Löffel Anstellgut weiter — samt Stammbaum.<br>Someone is passing a jar on to you — family tree included.</p>
+  <a class="open" id="open" href="#">In Fermento öffnen · Open in Fermento</a>
+  <p class="note">
+    Fermento muss auf diesem iPhone installiert sein. Ist es das nicht, lade es zuerst aus dem App Store
+    und tippe den Link danach noch einmal an.<br>
+    Fermento has to be installed on this iPhone. If it isn't, get it from the App Store first and tap the link again.
+  </p>
+  <p class="err" id="err" hidden>Dieser Link enthält kein Fermento-Glas. · This link doesn't carry a Fermento jar.</p>
+  <script>
+    // The share link is a plain https URL so Messages, WhatsApp and Mail make it
+    // tappable; this page hands the payload to the app via its URL scheme.
+    (function () {
+      var d = new URLSearchParams(location.search).get("d");
+      var btn = document.getElementById("open");
+      if (!d || !/^[A-Za-z0-9_-]+$/.test(d)) {
+        btn.hidden = true;
+        document.getElementById("err").hidden = false;
+        return;
+      }
+      var target = "fermento://jar?d=" + d;
+      btn.href = target;
+      // try straight away; if the app isn't installed nothing happens and the button stays
+      setTimeout(function () { location.href = target; }, 300);
+    })();
+  </script>
+</body>
+</html>

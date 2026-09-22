@@ -39,14 +39,16 @@
 
 <section data-lang="de" class="active">
   <h1>Datenschutzerklärung</h1>
-  <p class="updated">Stand: 8. September 2026 · gilt für die iOS-App „Fermento“</p>
+  <p class="updated">Stand: 22. September 2026 · gilt für die iOS-App „Fermento“</p>
 
   <div class="highlight">
     <strong>Kurzfassung:</strong> Fermento speichert deine Gläser, Protokolle und Fotos auf deinem
-    Gerät. Es gibt keinen Server von mir, kein Tracking, keine Werbung und keine Analyse-Dienste.
-    Wenn du iCloud aktiviert hast, synchronisiert Apple deine Daten in deine private iCloud —
-    ich habe darauf keinen Zugriff. Nur zwei Dinge verlassen dein Gerät überhaupt: eine ungefähre
-    Ortsangabe für die optionale Wettervorhersage und Kaufinformationen für die Abo-Verwaltung.
+    Gerät. Es gibt kein Tracking, keine Werbung und kein Analyse-SDK eines Drittanbieters. Wenn du
+    iCloud aktiviert hast, synchronisiert Apple deine Daten in deine private iCloud — ich habe darauf
+    keinen Zugriff. Dein Gerät verlassen nur: eine ungefähre Ortsangabe für die optionale
+    Wettervorhersage, Kaufinformationen für die Abo-Verwaltung, ein Foto, das du ausdrücklich zur
+    Analyse gibst (es wird nirgends gespeichert), und anonyme Nutzungszahlen ohne jede Kennung, die
+    du abschalten kannst.
   </div>
 
   <h2>1. Verantwortlicher</h2>
@@ -84,8 +86,7 @@
     Du kannst Fotos aufnehmen oder aus deiner Mediathek auswählen, um sie an ein Glas, eine
     Fütterung oder einen Rise zu hängen. Der Zugriff erfolgt nur nach deiner ausdrücklichen
     Freigabe durch iOS und nur für das jeweils von dir gewählte Bild. Die Fotos werden im
-    App-Container gespeichert (und ggf. gemäß 2.2 in deine iCloud synchronisiert). Sie werden
-    nicht an mich oder Dritte übertragen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
+    App-Container gespeichert (und ggf. gemäß 2.2 in deine iCloud synchronisiert). Sie werden nicht an mich oder Dritte übertragen. Eine Ausnahme gibt es nur, wenn du ein Bild ausdrücklich zur Analyse gibst — siehe 2.7. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.
   </p>
 
   <h3>2.4 Standort und Wettervorhersage (optional)</h3>
@@ -126,11 +127,52 @@
     jederzeit widerrufen.
   </p>
 
-  <h2>3. Kein Tracking, keine Werbung, keine Analyse</h2>
+    <h3>2.7 Foto-Analyse (Fermento Plus)</h3>
   <p>
-    Fermento enthält keine Werbung, kein Analyse- oder Crash-Reporting-SDK, keine Social-Media-
-    Plugins und kein geräteübergreifendes Tracking. Es wird keine Werbe-ID (IDFA) verwendet und
-    kein App-Tracking-Transparency-Dialog angezeigt, weil kein Tracking stattfindet.
+    Du kannst Bubbie ein Foto deines Glases oder eines angeschnittenen Brotes zur Analyse
+    geben. Nur dann — und nur für dieses eine Bild — verlässt ein Foto dein Gerät. Vor dem
+    Versand wird es auf dem Gerät auf maximal 1024 Pixel verkleinert und neu kodiert; dabei
+    gehen die EXIF-Daten der Kamera einschließlich etwaiger GPS-Koordinaten verloren. Mitgesendet
+    wird eine kurze technische Beschreibung des Glases (Mehlsorte, Hydration, Alter in Tagen,
+    Stunden seit der letzten Fütterung, Fütterungsabstand, letztes Verhältnis, Raumtemperatur) —
+    kein Name, keine Kennung, keine Kontaktdaten.
+  </p>
+  <p>
+    Die Verarbeitung erfolgt auf einem von mir betriebenen Cloudflare Worker, der das Bild an ein
+    Bildmodell in der Cloudflare-Infrastruktur weiterreicht und eine strukturierte Bewertung
+    zurückgibt. <strong>Das Foto wird dabei nicht dauerhaft gespeichert, nicht protokolliert und
+    nicht zum Training von Modellen verwendet.</strong> Es besteht für die Dauer der Anfrage und
+    wird danach verworfen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO — die Analyse ist genau
+    die Leistung, die du mit dem Antippen angefordert hast.
+  </p>
+  <p>
+    Damit der Dienst nicht von fremden Programmen missbraucht wird, kann die App eine
+    Geräte-Bestätigung von Apple (<em>App Attest</em>) mitsenden. Diese besteht aus einem
+    kryptografischen Schlüssel und einer Signatur; sie enthält keine Angaben über dich oder
+    dein Gerät, die dich identifizieren.
+  </p>
+
+  <h3>2.8 Anonyme Nutzungszahlen</h3>
+  <p>
+    Um zu erkennen, an welcher Stelle die App unverständlich ist, meldet sie einzelne
+    Bedienschritte — etwa „Onboarding gesehen“, „Onboarding abgeschlossen“, „erste Fütterung
+    eingetragen“. Übertragen werden ausschließlich der Name des Schritts, die App-Version und
+    ob Plus aktiv ist. <strong>Es wird keinerlei Kennung übertragen</strong> — keine Nutzer-,
+    Geräte- oder Sitzungs-Kennung — und die IP-Adresse wird nicht gespeichert. Jede Installation
+    meldet jeden Schritt höchstens einmal; genau deshalb reichen die reinen Zählerstände aus und
+    es braucht nichts, woran sich Ereignisse zusammenführen ließen. Ein Personenbezug ist damit
+    nicht herstellbar. Du kannst die Übertragung in den Einstellungen der App jederzeit
+    abschalten. Rechtsgrundlage, soweit man überhaupt von personenbezogenen Daten ausgehen will:
+    Art. 6 Abs. 1 lit. f DSGVO.
+  </p>
+
+  <h2>3. Keine Werbung, kein Tracking</h2>
+  <p>
+    Fermento enthält keine Werbung, kein Crash-Reporting-SDK, keine Social-Media-Plugins und kein
+    geräteübergreifendes Tracking. Es wird keine Werbe-ID (IDFA) verwendet und kein
+    App-Tracking-Transparency-Dialog angezeigt, weil kein Tracking stattfindet. Ein Analyse-SDK
+    eines Drittanbieters ist nicht eingebunden. Die einzigen Nutzungsdaten, die die App erhebt,
+    sind die anonymen Zählerstände aus 2.8 — ohne jede Kennung und abschaltbar.
   </p>
 
   <h2>4. Empfänger und Auftragsverarbeiter</h2>
@@ -151,10 +193,15 @@
       <td>Wettervorhersage für den optionalen Hitze-/Kältehinweis</td>
       <td>auf zwei Nachkommastellen gekürzte Koordinaten</td>
     </tr>
+      <tr>
+      <td>Cloudflare, Inc. (USA) — Worker und Bildmodell</td>
+      <td>Foto-Analyse (2.7) und anonyme Nutzungszahlen (2.8)</td>
+      <td>das übermittelte Foto (nur für die Dauer der Anfrage), technische Angaben zum Glas, Schrittname und App-Version; bei aktivem Plus zusätzlich die zufällige App-Nutzer-Kennung zur Prüfung der Berechtigung</td>
+    </tr>
   </table>
   <p>
-    Bei RevenueCat erfolgt eine Verarbeitung in den USA. Die Übermittlung wird auf die
-    Standardvertragsklauseln der EU-Kommission gestützt. Mit RevenueCat besteht ein Vertrag zur
+    Bei RevenueCat und Cloudflare erfolgt eine Verarbeitung auch in den USA. Die Übermittlung wird jeweils auf die
+    Standardvertragsklauseln der EU-Kommission gestützt. Mit beiden besteht ein Vertrag zur
     Auftragsverarbeitung.
   </p>
 
@@ -167,6 +214,13 @@
     Abfrage überschrieben. Bei RevenueCat gespeicherte Kaufinformationen werden für die Dauer
     des Abos und darüber hinaus im Rahmen der handels- und steuerrechtlichen Pflichten
     aufbewahrt.
+  </p>
+
+    <p>
+    Ein zur Analyse übermitteltes Foto (2.7) wird <strong>nicht gespeichert</strong>: Es besteht nur
+    für die Dauer der Anfrage und wird danach verworfen; auch in Protokollen wird es nicht abgelegt.
+    Die anonymen Nutzungszahlen (2.8) enthalten keine Kennung und lassen sich daher weder einer
+    Person zuordnen noch einzeln löschen; sie werden nach 90 Tagen aggregiert verworfen.
   </p>
 
   <h2>6. Deine Rechte</h2>
@@ -206,14 +260,15 @@
 
 <section data-lang="en">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 8 September 2026 · applies to the iOS app “Fermento”</p>
+  <p class="updated">Last updated: 22 September 2026 · applies to the iOS app “Fermento”</p>
 
   <div class="highlight">
     <strong>In short:</strong> Fermento keeps your jars, logs and photos on your device. There is
-    no server of mine, no tracking, no advertising and no analytics. If you have iCloud enabled,
-    Apple syncs your data to your private iCloud — I have no access to it. Only two things ever
-    leave your device: an approximate location for the optional weather forecast, and purchase
-    information for subscription management.
+    no tracking, no advertising and no third-party analytics SDK. If you have iCloud enabled, Apple
+    syncs your data to your private iCloud — I have no access to it. The only things that leave your
+    device are: an approximate location for the optional weather forecast, purchase information for
+    subscription management, a photo you explicitly hand over for a reading (it is stored nowhere),
+    and anonymous usage counts without any identifier, which you can switch off.
   </div>
 
   <h2>1. Controller</h2>
@@ -248,7 +303,7 @@
     You can take photos or pick them from your library to attach them to a jar, a feed or a rise.
     Access happens only after you explicitly grant it through iOS, and only for the image you
     select. Photos are stored in the app container (and, where enabled, synced to your iCloud per
-    2.2). They are never transmitted to me or to third parties. Legal basis: Art. 6(1)(b) GDPR.
+    2.2). They are not transmitted to me or to third parties. The only exception is a picture you explicitly hand over for a reading — see 2.7. Legal basis: Art. 6(1)(b) GDPR.
   </p>
 
   <h3>2.4 Location and weather forecast (optional)</h3>
@@ -285,11 +340,47 @@
     transmission to me. You grant permission through iOS and can withdraw it there at any time.
   </p>
 
-  <h2>3. No tracking, no advertising, no analytics</h2>
+    <h3>2.7 Photo readings (Fermento Plus)</h3>
   <p>
-    Fermento contains no advertising, no analytics or crash-reporting SDK, no social media plugins
-    and no cross-device tracking. No advertising identifier (IDFA) is used and no App Tracking
-    Transparency prompt is shown, because no tracking takes place.
+    You can hand Bubbie a photo of your jar or of a cut loaf to be read. Only then — and only
+    for that one picture — does a photo leave your device. Before it is sent it is resized on the
+    device to at most 1024 pixels and re-encoded, which discards the camera's EXIF data including
+    any GPS coordinates. A short technical description of the jar travels with it (flour, hydration,
+    age in days, hours since the last feed, feeding interval, last ratio, room temperature) — no
+    name, no identifier, no contact details.
+  </p>
+  <p>
+    Processing happens on a Cloudflare Worker operated by me, which passes the image to a vision
+    model within Cloudflare's infrastructure and returns a structured verdict. <strong>The photo is
+    not stored, not logged and not used to train any model.</strong> It exists for the duration of
+    the request and is then discarded. Legal basis: Art. 6(1)(b) GDPR — the reading is precisely
+    the service you asked for by tapping.
+  </p>
+  <p>
+    To keep the service from being abused by other programs, the app may send a device attestation
+    from Apple (<em>App Attest</em>). It consists of a cryptographic key and a signature and
+    contains nothing that identifies you or your device.
+  </p>
+
+  <h3>2.8 Anonymous usage counts</h3>
+  <p>
+    To find out where the app is confusing, it reports individual steps — for example "onboarding
+    seen", "onboarding finished", "first feed logged". Only the step name, the app version and
+    whether Plus is active are transmitted. <strong>No identifier of any kind is sent</strong> — no
+    user, device or session id — and the IP address is not stored. Each installation reports each
+    step at most once, which is exactly why plain counts are enough and nothing is needed to join
+    events on. No personal reference can be established from this. You can switch the transmission
+    off at any time in the app's settings. Legal basis, insofar as one assumes personal data at all:
+    Art. 6(1)(f) GDPR.
+  </p>
+
+  <h2>3. No advertising, no tracking</h2>
+  <p>
+    Fermento contains no advertising, no crash-reporting SDK, no social media plugins and no
+    cross-device tracking. No advertising identifier (IDFA) is used and no App Tracking Transparency
+    dialog is shown, because no tracking takes place. No third-party analytics SDK is embedded. The
+    only usage data the app collects are the anonymous counts described in 2.8 — without any
+    identifier, and switchable off.
   </p>
 
   <h2>4. Recipients and processors</h2>
@@ -310,10 +401,16 @@
       <td>Weather forecast for the optional heat/cold heads-up</td>
       <td>coordinates truncated to two decimal places</td>
     </tr>
+      <tr>
+      <td>Cloudflare, Inc. (USA) — Worker and vision model</td>
+      <td>Photo readings (2.7) and anonymous usage counts (2.8)</td>
+      <td>the submitted photo (only for the duration of the request), technical details about the jar, step name and app version; with Plus active, additionally the random app user id used to check entitlement</td>
+    </tr>
   </table>
   <p>
-    RevenueCat processes data in the USA. The transfer is based on the European Commission's
-    Standard Contractual Clauses. A data processing agreement is in place with RevenueCat.
+    RevenueCat and Cloudflare also process data in the United States. Each transfer is based on the
+    European Commission's standard contractual clauses. A data processing agreement is in place
+    with both.
   </p>
 
   <h2>5. Retention</h2>
@@ -323,6 +420,13 @@
     (Apple ID → iCloud → Manage Storage). The location is only kept as a last known value and is
     overwritten with every check. Purchase information held by RevenueCat is retained for the
     duration of the subscription and beyond as required by commercial and tax law.
+  </p>
+
+    <p>
+    A photo submitted for a reading (2.7) is <strong>not stored</strong>: it exists only for the
+    duration of the request and is discarded afterwards, and it is not written to any log. The
+    anonymous usage counts (2.8) contain no identifier and can therefore neither be attributed to a
+    person nor deleted individually; they are discarded in aggregate after 90 days.
   </p>
 
   <h2>6. Your rights</h2>
@@ -361,14 +465,15 @@
 
 <section data-lang="es">
   <h1>Política de privacidad</h1>
-  <p class="updated">Actualizada el 8 de septiembre de 2026 · se aplica a la app para iOS «Fermento»</p>
+  <p class="updated">Actualizada el 22 de septiembre de 2026 · se aplica a la app para iOS «Fermento»</p>
 
   <div class="highlight">
     <strong>En resumen:</strong> Fermento guarda tus tarros, registros y fotos en tu dispositivo.
-    No hay ningún servidor mío, ni rastreo, ni publicidad, ni servicios de analítica. Si tienes
-    iCloud activado, Apple sincroniza tus datos en tu iCloud privado, al que yo no tengo acceso.
-    Solo dos cosas salen de tu dispositivo: una ubicación aproximada para la previsión
-    meteorológica opcional y datos de compra para gestionar la suscripción.
+    No hay rastreo, ni publicidad, ni SDK de analítica de terceros. Si tienes iCloud activado, Apple
+    sincroniza tus datos en tu iCloud privado, al que yo no tengo acceso. De tu dispositivo solo
+    salen: una ubicación aproximada para la previsión meteorológica opcional, datos de compra para
+    gestionar la suscripción, una foto que entregas expresamente para su lectura (no se almacena en
+    ningún sitio) y recuentos de uso anónimos sin identificador alguno, que puedes desactivar.
   </div>
 
   <h2>1. Responsable del tratamiento</h2>
@@ -405,7 +510,7 @@
     Puedes hacer fotos o elegirlas de tu fototeca para adjuntarlas a un tarro, una alimentación o
     una subida. El acceso solo se produce tras tu autorización expresa a través de iOS y
     únicamente para la imagen que elijas. Las fotos se guardan en el contenedor de la app (y, en
-    su caso, se sincronizan con tu iCloud según 2.2). No se me transmiten ni a mí ni a terceros.
+    su caso, se sincronizan con tu iCloud según 2.2). No se transmiten ni a mí ni a terceros. La única excepción es una imagen que entregas expresamente para su lectura; véase 2.7.
     Base jurídica: art. 6.1.b RGPD.
   </p>
 
@@ -447,11 +552,48 @@
     concedes a través de iOS y puedes revocarlo allí en cualquier momento.
   </p>
 
-  <h2>3. Sin rastreo, sin publicidad, sin analítica</h2>
+    <h3>2.7 Lectura de fotos (Fermento Plus)</h3>
   <p>
-    Fermento no contiene publicidad, ni SDK de analítica o de informes de fallos, ni complementos
-    de redes sociales, ni rastreo entre dispositivos. No se utiliza identificador publicitario
-    (IDFA) ni se muestra el diálogo de App Tracking Transparency, porque no hay ningún rastreo.
+    Puedes darle a Bubbie una foto de tu tarro o de una rebanada para que la lea. Solo entonces —y
+    solo para esa imagen— una foto sale de tu dispositivo. Antes de enviarla se reduce en el
+    dispositivo a 1024 píxeles como máximo y se vuelve a codificar, lo que elimina los datos EXIF
+    de la cámara, incluidas las coordenadas GPS. La acompaña una breve descripción técnica del
+    tarro (harina, hidratación, edad en días, horas desde la última alimentación, intervalo,
+    última proporción, temperatura ambiente): sin nombre, sin identificador, sin datos de contacto.
+  </p>
+  <p>
+    El tratamiento se realiza en un Cloudflare Worker operado por mí, que entrega la imagen a un
+    modelo de visión dentro de la infraestructura de Cloudflare y devuelve una valoración
+    estructurada. <strong>La foto no se almacena, no se registra y no se utiliza para entrenar
+    ningún modelo.</strong> Existe mientras dura la petición y después se descarta. Base jurídica:
+    art. 6.1.b RGPD: la lectura es exactamente el servicio que has solicitado al pulsar.
+  </p>
+  <p>
+    Para evitar que otros programas abusen del servicio, la app puede enviar una atestación de
+    dispositivo de Apple (<em>App Attest</em>). Consiste en una clave criptográfica y una firma, y
+    no contiene nada que te identifique a ti ni a tu dispositivo.
+  </p>
+
+  <h3>2.8 Recuentos de uso anónimos</h3>
+  <p>
+    Para saber dónde resulta confusa la app, esta informa de pasos concretos: por ejemplo
+    «onboarding visto», «onboarding terminado», «primera alimentación registrada». Solo se
+    transmiten el nombre del paso, la versión de la app y si Plus está activo. <strong>No se envía
+    ningún identificador</strong> —ni de usuario, ni de dispositivo, ni de sesión— y la dirección IP
+    no se conserva. Cada instalación informa de cada paso como máximo una vez; por eso bastan los
+    recuentos simples y no hace falta nada con lo que enlazar eventos. No puede establecerse
+    ninguna relación con una persona. Puedes desactivar el envío en cualquier momento en los
+    ajustes de la app. Base jurídica, en la medida en que se asuman datos personales:
+    art. 6.1.f RGPD.
+  </p>
+
+  <h2>3. Sin publicidad, sin rastreo</h2>
+  <p>
+    Fermento no contiene publicidad, ni SDK de informes de fallos, ni complementos de redes
+    sociales, ni rastreo entre dispositivos. No se utiliza identificador publicitario (IDFA) ni se
+    muestra el diálogo de App Tracking Transparency, porque no hay rastreo. No hay integrado ningún
+    SDK de analítica de terceros. Los únicos datos de uso que recoge la app son los recuentos
+    anónimos descritos en 2.8: sin ningún identificador y desactivables.
   </p>
 
   <h2>4. Destinatarios y encargados del tratamiento</h2>
@@ -472,11 +614,16 @@
       <td>Previsión meteorológica para el aviso opcional de calor o frío</td>
       <td>coordenadas recortadas a dos decimales</td>
     </tr>
+      <tr>
+      <td>Cloudflare, Inc. (EE. UU.) — Worker y modelo de visión</td>
+      <td>Lectura de fotos (2.7) y recuentos de uso anónimos (2.8)</td>
+      <td>la foto enviada (solo mientras dura la petición), datos técnicos del tarro, nombre del paso y versión de la app; con Plus activo, además el identificador aleatorio de usuario para comprobar la suscripción</td>
+    </tr>
   </table>
   <p>
-    En el caso de RevenueCat el tratamiento se realiza en Estados Unidos. La transferencia se basa
-    en las cláusulas contractuales tipo de la Comisión Europea. Con RevenueCat existe un contrato
-    de encargo del tratamiento.
+    RevenueCat y Cloudflare tratan datos también en Estados Unidos. Cada transferencia se ampara en
+    las cláusulas contractuales tipo de la Comisión Europea. Con ambos existe un contrato de
+    encargo de tratamiento.
   </p>
 
   <h2>5. Plazo de conservación</h2>
@@ -487,6 +634,13 @@
     se conserva como último valor conocido y se sobrescribe con cada consulta. La información de
     compra almacenada en RevenueCat se conserva mientras dure la suscripción y, más allá, en el
     marco de las obligaciones mercantiles y fiscales.
+  </p>
+
+    <p>
+    Una foto enviada para su lectura (2.7) <strong>no se almacena</strong>: existe solo mientras dura
+    la petición y después se descarta, y no se escribe en ningún registro. Los recuentos de uso
+    anónimos (2.8) no contienen identificador alguno, por lo que no pueden atribuirse a una persona
+    ni borrarse individualmente; se descartan de forma agregada a los 90 días.
   </p>
 
   <h2>6. Tus derechos</h2>
@@ -526,15 +680,16 @@
 
 <section data-lang="fr">
   <h1>Politique de confidentialité</h1>
-  <p class="updated">Mise à jour le 8 septembre 2026 · s'applique à l'app iOS « Fermento »</p>
+  <p class="updated">Mise à jour le 22 septembre 2026 · s'applique à l'app iOS « Fermento »</p>
 
   <div class="highlight">
     <strong>En bref :</strong> Fermento enregistre tes bocaux, tes journaux et tes photos sur ton
-    appareil. Il n'y a aucun serveur m'appartenant, aucun pistage, aucune publicité et aucun
-    service d'analyse. Si tu as activé iCloud, Apple synchronise tes données dans ton iCloud
-    privé, auquel je n'ai pas accès. Deux choses seulement quittent ton appareil : une position
-    approximative pour la météo facultative et des informations d'achat pour la gestion de
-    l'abonnement.
+    appareil. Il n'y a aucun pistage, aucune publicité et aucun SDK d'analyse tiers. Si tu as activé
+    iCloud, Apple synchronise tes données dans ton iCloud privé, auquel je n'ai pas accès. Seules
+    quittent ton appareil : une position approximative pour la météo facultative, des informations
+    d'achat pour la gestion de l'abonnement, une photo que tu confies expressément à une lecture
+    (elle n'est conservée nulle part) et des comptages d'usage anonymes sans aucun identifiant, que
+    tu peux désactiver.
   </div>
 
   <h2>1. Responsable du traitement</h2>
@@ -572,8 +727,7 @@
     Tu peux prendre des photos ou en choisir dans ta photothèque pour les rattacher à un bocal, à
     un nourrissage ou à une pousse. L'accès n'a lieu qu'après ton autorisation expresse via iOS et
     uniquement pour l'image que tu as choisie. Les photos sont enregistrées dans le conteneur de
-    l'app (et, le cas échéant, synchronisées dans ton iCloud conformément au point 2.2). Elles ne
-    sont transmises ni à moi ni à des tiers. Base légale : art. 6, § 1, point b du RGPD.
+    l'app (et, le cas échéant, synchronisées dans ton iCloud conformément au point 2.2). Elles ne sont transmises ni à moi ni à des tiers. La seule exception est une image que tu confies expressément à une lecture — voir 2.7. Base légale : art. 6, § 1, point b du RGPD.
   </p>
 
   <h3>2.4 Position et prévisions météo (facultatif)</h3>
@@ -614,11 +768,49 @@
     peux la révoquer là à tout moment.
   </p>
 
-  <h2>3. Pas de pistage, pas de publicité, pas d'analyse</h2>
+    <h3>2.7 Lecture de photos (Fermento Plus)</h3>
   <p>
-    Fermento ne contient ni publicité, ni SDK d'analyse ou de rapport de plantage, ni plugin de
-    réseau social, ni pistage inter-appareils. Aucun identifiant publicitaire (IDFA) n'est utilisé
-    et aucune fenêtre App Tracking Transparency n'est affichée, puisqu'il n'y a aucun pistage.
+    Tu peux confier à Bubbie une photo de ton bocal ou d'une tranche pour qu'elle la lise. Ce n'est
+    qu'alors — et uniquement pour cette image — qu'une photo quitte ton appareil. Avant l'envoi,
+    elle est redimensionnée sur l'appareil à 1024 pixels au maximum et ré-encodée, ce qui supprime
+    les données EXIF de l'appareil photo, y compris les coordonnées GPS. Une brève description
+    technique du bocal l'accompagne (farine, hydratation, âge en jours, heures depuis le dernier
+    rafraîchi, intervalle, dernier ratio, température ambiante) — pas de nom, pas d'identifiant,
+    pas de coordonnées.
+  </p>
+  <p>
+    Le traitement a lieu sur un Cloudflare Worker que j'exploite, qui transmet l'image à un modèle
+    de vision au sein de l'infrastructure Cloudflare et renvoie une évaluation structurée.
+    <strong>La photo n'est ni conservée, ni journalisée, ni utilisée pour entraîner un
+    modèle.</strong> Elle existe le temps de la requête puis est supprimée. Base légale :
+    art. 6, §1, b) RGPD — la lecture est précisément la prestation que tu as demandée.
+  </p>
+  <p>
+    Pour éviter que d'autres programmes n'abusent du service, l'app peut joindre une attestation
+    d'appareil d'Apple (<em>App Attest</em>). Elle se compose d'une clé cryptographique et d'une
+    signature et ne contient rien qui t'identifie, toi ou ton appareil.
+  </p>
+
+  <h3>2.8 Comptages d'usage anonymes</h3>
+  <p>
+    Pour repérer où l'app devient incompréhensible, elle signale certaines étapes — par exemple
+    « onboarding vu », « onboarding terminé », « premier rafraîchi noté ». Seuls le nom de l'étape,
+    la version de l'app et l'activation de Plus sont transmis. <strong>Aucun identifiant n'est
+    envoyé</strong> — ni utilisateur, ni appareil, ni session — et l'adresse IP n'est pas conservée.
+    Chaque installation ne signale chaque étape qu'une fois au plus ; c'est précisément pourquoi de
+    simples compteurs suffisent et qu'il n'y a besoin de rien pour relier des événements. Aucun
+    rattachement à une personne n'est possible. Tu peux désactiver l'envoi à tout moment dans les
+    réglages de l'app. Base légale, pour autant que l'on retienne des données personnelles :
+    art. 6, §1, f) RGPD.
+  </p>
+
+  <h2>3. Pas de publicité, pas de pistage</h2>
+  <p>
+    Fermento ne contient ni publicité, ni SDK de rapport de plantage, ni plugin de réseau social,
+    ni pistage inter-appareils. Aucun identifiant publicitaire (IDFA) n'est utilisé et aucune
+    fenêtre App Tracking Transparency n'est affichée, car il n'y a pas de pistage. Aucun SDK
+    d'analyse tiers n'est intégré. Les seules données d'usage collectées par l'app sont les
+    comptages anonymes décrits en 2.8 — sans aucun identifiant, et désactivables.
   </p>
 
   <h2>4. Destinataires et sous-traitants</h2>
@@ -639,11 +831,16 @@
       <td>Prévisions météo pour l'alerte facultative de canicule ou de froid</td>
       <td>coordonnées arrondies à deux décimales</td>
     </tr>
+      <tr>
+      <td>Cloudflare, Inc. (États-Unis) — Worker et modèle de vision</td>
+      <td>Lecture de photos (2.7) et comptages d'usage anonymes (2.8)</td>
+      <td>la photo transmise (uniquement le temps de la requête), les données techniques du bocal, le nom de l'étape et la version de l'app ; avec Plus actif, en plus l'identifiant aléatoire servant à vérifier l'abonnement</td>
+    </tr>
   </table>
   <p>
-    Chez RevenueCat, le traitement a lieu aux États-Unis. Le transfert s'appuie sur les clauses
-    contractuelles types de la Commission européenne. Un contrat de sous-traitance a été conclu
-    avec RevenueCat.
+    RevenueCat et Cloudflare traitent également des données aux États-Unis. Chaque transfert repose
+    sur les clauses contractuelles types de la Commission européenne. Un contrat de sous-traitance
+    est conclu avec les deux.
   </p>
 
   <h2>5. Durée de conservation</h2>
@@ -655,6 +852,14 @@
     est écrasée à chaque requête. Les informations d'achat conservées chez RevenueCat le sont
     pendant la durée de l'abonnement et au-delà, dans le cadre des obligations commerciales et
     fiscales.
+  </p>
+
+    <p>
+    Une photo transmise pour une lecture (2.7) n'est <strong>pas conservée</strong> : elle n'existe
+    que le temps de la requête puis est supprimée, et elle n'est écrite dans aucun journal. Les
+    comptages d'usage anonymes (2.8) ne contiennent aucun identifiant et ne peuvent donc être ni
+    rattachés à une personne ni supprimés individuellement ; ils sont supprimés de façon agrégée au
+    bout de 90 jours.
   </p>
 
   <h2>6. Tes droits</h2>
@@ -694,15 +899,16 @@
 
 <section data-lang="it">
   <h1>Informativa sulla privacy</h1>
-  <p class="updated">Aggiornata l'8 settembre 2026 · vale per l'app iOS «Fermento»</p>
+  <p class="updated">Aggiornata il 22 settembre 2026 · vale per l'app iOS «Fermento»</p>
 
   <div class="highlight">
     <strong>In breve:</strong> Fermento salva i tuoi barattoli, i registri e le foto sul tuo
-    dispositivo. Non esiste alcun server mio, nessun tracciamento, nessuna pubblicità e nessun
-    servizio di analisi. Se hai attivato iCloud, Apple sincronizza i tuoi dati nel tuo iCloud
-    privato, al quale io non ho accesso. Solo due cose lasciano il tuo dispositivo: una posizione
-    approssimativa per le previsioni meteo facoltative e i dati d'acquisto per la gestione
-    dell'abbonamento.
+    dispositivo. Non c'è alcun tracciamento, nessuna pubblicità e nessun SDK di analisi di terze
+    parti. Se hai attivato iCloud, Apple sincronizza i tuoi dati nel tuo iCloud privato, al quale io
+    non ho accesso. Dal tuo dispositivo escono soltanto: una posizione approssimativa per le
+    previsioni meteo facoltative, i dati d'acquisto per la gestione dell'abbonamento, una foto che
+    affidi espressamente a una lettura (non viene conservata da nessuna parte) e conteggi d'uso
+    anonimi privi di qualsiasi identificativo, che puoi disattivare.
   </div>
 
   <h2>1. Titolare del trattamento</h2>
@@ -740,8 +946,7 @@
     Puoi scattare foto o sceglierle dalla tua libreria per allegarle a un barattolo, a un
     rinfresco o a una crescita. L'accesso avviene solo dopo la tua autorizzazione esplicita
     tramite iOS e solo per l'immagine che hai scelto. Le foto vengono salvate nel contenitore
-    dell'app (ed eventualmente sincronizzate nel tuo iCloud secondo il punto 2.2). Non vengono
-    trasmesse né a me né a terzi. Base giuridica: art. 6, par. 1, lett. b GDPR.
+    dell'app (ed eventualmente sincronizzate nel tuo iCloud secondo il punto 2.2). Non vengono trasmesse né a me né a terzi. L'unica eccezione è un'immagine che affidi espressamente a una lettura: vedi 2.7. Base giuridica: art. 6, par. 1, lett. b GDPR.
   </p>
 
   <h3>2.4 Posizione e previsioni meteo (facoltativo)</h3>
@@ -783,12 +988,49 @@
     revocarla lì in qualsiasi momento.
   </p>
 
-  <h2>3. Nessun tracciamento, nessuna pubblicità, nessuna analisi</h2>
+    <h3>2.7 Lettura delle foto (Fermento Plus)</h3>
   <p>
-    Fermento non contiene pubblicità, né SDK di analisi o di segnalazione dei crash, né plugin di
-    social media, né tracciamento tra dispositivi. Non viene utilizzato alcun identificativo
-    pubblicitario (IDFA) e non viene mostrata alcuna finestra di App Tracking Transparency, perché
-    non avviene alcun tracciamento.
+    Puoi dare a Bubbie una foto del tuo barattolo o di una fetta perché la legga. Solo allora — e
+    solo per quell'immagine — una foto lascia il tuo dispositivo. Prima dell'invio viene ridotta sul
+    dispositivo a un massimo di 1024 pixel e ricodificata, operazione che elimina i dati EXIF della
+    fotocamera, comprese eventuali coordinate GPS. La accompagna una breve descrizione tecnica del
+    barattolo (farina, idratazione, età in giorni, ore dall'ultimo rinfresco, intervallo, ultimo
+    rapporto, temperatura ambiente): nessun nome, nessun identificativo, nessun recapito.
+  </p>
+  <p>
+    Il trattamento avviene su un Cloudflare Worker gestito da me, che inoltra l'immagine a un
+    modello di visione all'interno dell'infrastruttura Cloudflare e restituisce una valutazione
+    strutturata. <strong>La foto non viene conservata, non viene registrata nei log e non viene
+    usata per addestrare alcun modello.</strong> Esiste per la durata della richiesta e poi viene
+    scartata. Base giuridica: art. 6, par. 1, lett. b GDPR — la lettura è esattamente il servizio
+    che hai richiesto con un tocco.
+  </p>
+  <p>
+    Per evitare che altri programmi abusino del servizio, l'app può inviare un'attestazione del
+    dispositivo di Apple (<em>App Attest</em>). È composta da una chiave crittografica e una firma
+    e non contiene nulla che identifichi te o il tuo dispositivo.
+  </p>
+
+  <h3>2.8 Conteggi d'uso anonimi</h3>
+  <p>
+    Per capire dove l'app risulta poco chiara, essa segnala singoli passaggi: ad esempio
+    «onboarding visto», «onboarding completato», «primo rinfresco registrato». Vengono trasmessi
+    solo il nome del passaggio, la versione dell'app e se Plus è attivo. <strong>Non viene inviato
+    alcun identificativo</strong> — né utente, né dispositivo, né sessione — e l'indirizzo IP non
+    viene conservato. Ogni installazione segnala ogni passaggio al massimo una volta: proprio per
+    questo bastano i semplici conteggi e non serve nulla con cui collegare gli eventi. Non è
+    possibile stabilire alcun riferimento personale. Puoi disattivare l'invio in qualsiasi momento
+    nelle impostazioni dell'app. Base giuridica, nella misura in cui si ipotizzino dati personali:
+    art. 6, par. 1, lett. f GDPR.
+  </p>
+
+  <h2>3. Nessuna pubblicità, nessun tracciamento</h2>
+  <p>
+    Fermento non contiene pubblicità, né SDK di crash reporting, né plugin di social media, né
+    tracciamento tra dispositivi. Non viene usato alcun identificativo pubblicitario (IDFA) e non
+    viene mostrata la finestra App Tracking Transparency, perché non avviene alcun tracciamento.
+    Non è integrato alcun SDK di analisi di terze parti. Gli unici dati d'uso raccolti dall'app
+    sono i conteggi anonimi descritti al punto 2.8: senza alcun identificativo e disattivabili.
   </p>
 
   <h2>4. Destinatari e responsabili del trattamento</h2>
@@ -809,11 +1051,16 @@
       <td>Previsioni meteo per l'avviso facoltativo di caldo o freddo</td>
       <td>coordinate arrotondate a due decimali</td>
     </tr>
+      <tr>
+      <td>Cloudflare, Inc. (USA) — Worker e modello di visione</td>
+      <td>Lettura delle foto (2.7) e conteggi d'uso anonimi (2.8)</td>
+      <td>la foto inviata (solo per la durata della richiesta), dati tecnici sul barattolo, nome del passaggio e versione dell'app; con Plus attivo, inoltre l'identificativo casuale usato per verificare l'abbonamento</td>
+    </tr>
   </table>
   <p>
-    Presso RevenueCat il trattamento avviene negli Stati Uniti. Il trasferimento si fonda sulle
-    clausole contrattuali tipo della Commissione europea. Con RevenueCat è in essere un contratto
-    di responsabile del trattamento.
+    RevenueCat e Cloudflare trattano dati anche negli Stati Uniti. Ogni trasferimento si basa sulle
+    clausole contrattuali tipo della Commissione europea. Con entrambi è in essere un contratto di
+    responsabile del trattamento.
   </p>
 
   <h2>5. Periodo di conservazione</h2>
@@ -824,6 +1071,13 @@
     solo come ultimo valore noto e viene sovrascritta a ogni richiesta. Le informazioni d'acquisto
     conservate presso RevenueCat vengono mantenute per la durata dell'abbonamento e oltre,
     nell'ambito degli obblighi commerciali e fiscali.
+  </p>
+
+    <p>
+    Una foto inviata per una lettura (2.7) <strong>non viene conservata</strong>: esiste solo per la
+    durata della richiesta e poi viene scartata, e non viene scritta in alcun log. I conteggi d'uso
+    anonimi (2.8) non contengono alcun identificativo e non possono quindi essere attribuiti a una
+    persona né cancellati singolarmente; vengono scartati in forma aggregata dopo 90 giorni.
   </p>
 
   <h2>6. I tuoi diritti</h2>
@@ -863,15 +1117,15 @@
 
 <section data-lang="nl">
   <h1>Privacyverklaring</h1>
-  <p class="updated">Bijgewerkt op 8 september 2026 · geldt voor de iOS-app 'Fermento'</p>
+  <p class="updated">Bijgewerkt op 22 september 2026 · geldt voor de iOS-app 'Fermento'</p>
 
   <div class="highlight">
     <strong>Kort samengevat:</strong> Fermento bewaart je potten, logboeken en foto's op je
-    apparaat. Er is geen server van mij, geen tracking, geen advertenties en geen
-    analysediensten. Als je iCloud hebt ingeschakeld, synchroniseert Apple je gegevens naar je
-    privé-iCloud, waartoe ik geen toegang heb. Slechts twee dingen verlaten je apparaat: een
-    globale locatie voor de optionele weersverwachting en aankoopgegevens voor het beheer van het
-    abonnement.
+    apparaat. Er is geen tracking, geen advertenties en geen analyse-SDK van derden. Als je iCloud
+    hebt ingeschakeld, synchroniseert Apple je gegevens naar je privé-iCloud, waartoe ik geen toegang
+    heb. Je apparaat verlaten alleen: een globale locatie voor de optionele weersverwachting,
+    aankoopgegevens voor het beheer van het abonnement, een foto die je uitdrukkelijk laat lezen (die
+    nergens wordt bewaard) en anonieme gebruikstellingen zonder enig kenmerk, die je kunt uitzetten.
   </div>
 
   <h2>1. Verwerkingsverantwoordelijke</h2>
@@ -909,8 +1163,7 @@
     Je kunt foto's maken of uit je bibliotheek kiezen om ze aan een pot, een voeding of een
     rijzing te koppelen. De toegang vindt alleen plaats na je uitdrukkelijke toestemming via iOS
     en uitsluitend voor de afbeelding die je zelf kiest. De foto's worden in de app-container
-    opgeslagen (en eventueel volgens 2.2 naar je iCloud gesynchroniseerd). Ze worden niet aan mij
-    of aan derden doorgegeven. Rechtsgrondslag: art. 6, lid 1, onder b AVG.
+    opgeslagen (en eventueel volgens 2.2 naar je iCloud gesynchroniseerd). Ze worden niet aan mij of aan derden doorgegeven. De enige uitzondering is een afbeelding die je uitdrukkelijk laat lezen — zie 2.7. Rechtsgrondslag: art. 6, lid 1, onder b AVG.
   </p>
 
   <h3>2.4 Locatie en weersverwachting (optioneel)</h3>
@@ -951,11 +1204,50 @@
     intrekken.
   </p>
 
-  <h2>3. Geen tracking, geen advertenties, geen analyse</h2>
+    <h3>2.7 Foto's laten lezen (Fermento Plus)</h3>
   <p>
-    Fermento bevat geen advertenties, geen analyse- of crashrapportage-SDK, geen social-media-
-    plug-ins en geen tracking over apparaten heen. Er wordt geen advertentie-id (IDFA) gebruikt en
-    er verschijnt geen App Tracking Transparency-venster, omdat er geen tracking plaatsvindt.
+    Je kunt Bubbie een foto van je pot of van een gesneden brood geven om te laten lezen. Alleen
+    dan — en alleen voor die ene afbeelding — verlaat een foto je apparaat. Voor verzending wordt
+    hij op het apparaat verkleind tot maximaal 1024 pixels en opnieuw gecodeerd; daarbij gaan de
+    EXIF-gegevens van de camera verloren, inclusief eventuele GPS-coördinaten. Er gaat een korte
+    technische beschrijving van de pot mee (bloem, hydratatie, leeftijd in dagen, uren sinds de
+    laatste voeding, voedingsinterval, laatste verhouding, kamertemperatuur) — geen naam, geen
+    kenmerk, geen contactgegevens.
+  </p>
+  <p>
+    De verwerking vindt plaats op een door mij beheerde Cloudflare Worker, die de afbeelding
+    doorgeeft aan een beeldmodel binnen de infrastructuur van Cloudflare en een gestructureerde
+    beoordeling teruggeeft. <strong>De foto wordt niet bewaard, niet gelogd en niet gebruikt om
+    modellen te trainen.</strong> Hij bestaat zolang het verzoek duurt en wordt daarna weggegooid.
+    Rechtsgrondslag: art. 6 lid 1 sub b AVG — de meting is precies de dienst die je met een tik
+    hebt gevraagd.
+  </p>
+  <p>
+    Om te voorkomen dat andere programma's de dienst misbruiken, kan de app een apparaatverklaring
+    van Apple meesturen (<em>App Attest</em>). Die bestaat uit een cryptografische sleutel en een
+    handtekening en bevat niets waarmee jij of je apparaat te identificeren bent.
+  </p>
+
+  <h3>2.8 Anonieme gebruikstellingen</h3>
+  <p>
+    Om te zien waar de app onduidelijk is, meldt hij losse stappen — bijvoorbeeld "onboarding
+    gezien", "onboarding afgerond", "eerste voeding genoteerd". Alleen de naam van de stap, de
+    app-versie en of Plus actief is worden verstuurd. <strong>Er wordt geen enkel kenmerk
+    verstuurd</strong> — geen gebruikers-, apparaat- of sessiekenmerk — en het IP-adres wordt niet
+    bewaard. Elke installatie meldt elke stap hoogstens één keer; juist daarom volstaan kale
+    tellingen en is er niets nodig om gebeurtenissen aan elkaar te knopen. Een herleiding naar een
+    persoon is daarmee niet mogelijk. Je kunt het versturen op elk moment uitzetten in de
+    instellingen van de app. Rechtsgrondslag, voor zover men al van persoonsgegevens uitgaat:
+    art. 6 lid 1 sub f AVG.
+  </p>
+
+  <h2>3. Geen advertenties, geen tracking</h2>
+  <p>
+    Fermento bevat geen advertenties, geen crash-reporting-SDK, geen socialemediaplug-ins en geen
+    tracking over apparaten heen. Er wordt geen advertentie-ID (IDFA) gebruikt en er wordt geen
+    App Tracking Transparency-venster getoond, omdat er geen tracking plaatsvindt. Er is geen
+    analyse-SDK van derden ingebouwd. De enige gebruiksgegevens die de app verzamelt zijn de
+    anonieme tellingen uit 2.8 — zonder enig kenmerk en uit te zetten.
   </p>
 
   <h2>4. Ontvangers en verwerkers</h2>
@@ -976,11 +1268,16 @@
       <td>Weersverwachting voor de optionele hitte- of koudewaarschuwing</td>
       <td>op twee decimalen afgeronde coördinaten</td>
     </tr>
+      <tr>
+      <td>Cloudflare, Inc. (VS) — Worker en beeldmodel</td>
+      <td>Foto's laten lezen (2.7) en anonieme gebruikstellingen (2.8)</td>
+      <td>de verzonden foto (alleen zolang het verzoek duurt), technische gegevens over de pot, stapnaam en app-versie; bij actief Plus daarnaast het willekeurige gebruikerskenmerk om het abonnement te controleren</td>
+    </tr>
   </table>
   <p>
-    Bij RevenueCat vindt de verwerking plaats in de Verenigde Staten. De doorgifte is gebaseerd op
-    de modelcontractbepalingen van de Europese Commissie. Met RevenueCat is een
-    verwerkersovereenkomst gesloten.
+    RevenueCat en Cloudflare verwerken ook gegevens in de Verenigde Staten. Elke doorgifte berust op
+    de modelcontractbepalingen van de Europese Commissie. Met beide is een verwerkersovereenkomst
+    gesloten.
   </p>
 
   <h2>5. Bewaartermijn</h2>
@@ -991,6 +1288,14 @@
     wordt alleen als laatst bekende waarde bewaard en bij elke aanvraag overschreven. De bij
     RevenueCat opgeslagen aankoopgegevens worden bewaard zolang het abonnement loopt en daarna in
     het kader van de handels- en fiscaalrechtelijke verplichtingen.
+  </p>
+
+    <p>
+    Een foto die voor een meting is verstuurd (2.7) wordt <strong>niet bewaard</strong>: hij bestaat
+    alleen zolang het verzoek duurt en wordt daarna weggegooid, en hij komt in geen enkel logbestand
+    terecht. De anonieme gebruikstellingen (2.8) bevatten geen enkel kenmerk en zijn daarom niet aan
+    een persoon toe te schrijven en niet afzonderlijk te verwijderen; ze worden na 90 dagen
+    geaggregeerd weggegooid.
   </p>
 
   <h2>6. Je rechten</h2>
